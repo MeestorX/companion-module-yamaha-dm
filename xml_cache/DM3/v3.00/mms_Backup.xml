@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<function name="Backup" collections="38" parameters="24" datasize="662" stringsize="4">
+<collections>
+    <collection name="Product" datasize="384" arraysize="1">
+        <parameter name="ProductName" type="string" arraysize="1">
+            <maximum>32</maximum>
+            <default>TF1</default>
+        </parameter>
+        <parameter name="ProductSubName" type="string" arraysize="1">
+            <maximum>32</maximum>
+        </parameter>
+        <parameter name="SerialNumber" type="string" arraysize="1">
+            <maximum>32</maximum>
+        </parameter>
+        <collection name="Software" datasize="272" arraysize="1">
+            <collection name="Main" datasize="16" arraysize="1">
+                <parameter name="Version" type="string" arraysize="1">
+                    <maximum>16</maximum>
+                </parameter>
+            </collection>
+            <collection name="DSP" datasize="16" arraysize="5">
+                <parameter name="Version" type="string" arraysize="1">
+                    <maximum>16</maximum>
+                </parameter>
+            </collection>
+            <collection name="PIC" datasize="16" arraysize="1">
+                <parameter name="Version" type="string" arraysize="1">
+                    <maximum>16</maximum>
+                </parameter>
+            </collection>
+            <collection name="PNCOM" datasize="16" arraysize="1">
+                <parameter name="Version" type="string" arraysize="1">
+                    <maximum>16</maximum>
+                </parameter>
+            </collection>
+            <collection name="FD8" datasize="16" arraysize="4">
+                <parameter name="Version" type="string" arraysize="1">
+                    <maximum>16</maximum>
+                </parameter>
+            </collection>
+            <collection name="HA" datasize="16" arraysize="4">
+                <parameter name="Version" type="string" arraysize="1">
+                    <maximum>16</maximum>
+                </parameter>
+            </collection>
+            <collection name="ComBridge" datasize="16" arraysize="1">
+                <parameter name="Version" type="string" arraysize="1">
+                    <maximum>16</maximum>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="Hardware" datasize="16" arraysize="1">
+            <parameter name="Version" type="string" arraysize="1">
+                <maximum>16</maximum>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="InputChannel" datasize="1" arraysize="40">
+        <collection name="Cue" datasize="1" arraysize="1">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="InputKeyIn" datasize="1" arraysize="32">
+        <collection name="Cue" datasize="1" arraysize="1">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="StInputChannel" datasize="1" arraysize="2">
+        <collection name="Cue" datasize="1" arraysize="1">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="FxRtnChannel" datasize="1" arraysize="2">
+        <collection name="Cue" datasize="1" arraysize="1">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="Group" datasize="1" arraysize="8">
+        <collection name="Cue" datasize="1" arraysize="1">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="Mix" datasize="1" arraysize="8">
+        <collection name="Cue" datasize="1" arraysize="1">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="StMix" datasize="1" arraysize="6">
+        <collection name="Cue" datasize="1" arraysize="1">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="Stereo" datasize="1" arraysize="1">
+        <collection name="Cue" datasize="1" arraysize="1">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="Mono" datasize="1" arraysize="1">
+        <collection name="Cue" datasize="1" arraysize="1">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="DCA" datasize="21" arraysize="8">
+        <collection name="Fader" datasize="1" arraysize="1">
+            <collection name="Cue" datasize="1" arraysize="1">
+                <parameter name="On" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="ToMix" datasize="1" arraysize="20">
+            <collection name="Cue" datasize="1" arraysize="1">
+                <parameter name="On" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="FX" datasize="1" arraysize="2">
+        <collection name="Cue" datasize="1" arraysize="1">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="InsFX" datasize="1" arraysize="8">
+        <collection name="Cue" datasize="1" arraysize="1">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+</collections>
+</function>

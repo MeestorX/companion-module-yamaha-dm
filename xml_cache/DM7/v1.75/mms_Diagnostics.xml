@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<function name="Diagnostics" collections="8" parameters="7" datasize="431" stringsize="3">
+<collections>
+    <collection name="Control" datasize="2" arraysize="1">
+        <parameter name="CurrentCategory" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>15</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <parameter name="CurrentCommand" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>189</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+    </collection>
+    <collection name="Command" datasize="2" arraysize="190">
+        <parameter name="Result" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>2</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <parameter name="Target" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+    </collection>
+    <collection name="BuiltIn" datasize="48" arraysize="1">
+        <collection name="InputPort" datasize="3" arraysize="16">
+            <collection name="HeadAmp" datasize="3" arraysize="1">
+                <parameter name="48V" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="Gain" type="int16_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>6400</maximum>
+                    <default>0</default>
+                    <step>100</step>
+                    <unit>dB</unit>
+                    <nominal>0</nominal>
+                    <scaling>100</scaling>
+                    <kind>0</kind>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="MainLCD" datasize="1" arraysize="1">
+        <collection name="Backlight" datasize="1" arraysize="1">
+            <parameter name="Enable" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+</collections>
+</function>

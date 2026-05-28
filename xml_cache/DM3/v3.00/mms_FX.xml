@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<function name="FX" collections="4" parameters="5" datasize="584" stringsize="0">
+<collections>
+    <collection name="FX" datasize="292" arraysize="2">
+        <parameter name="Bypass" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+            <kind>31</kind>
+        </parameter>
+        <parameter name="MixBalance" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>100</maximum>
+            <default>100</default>
+            <step>1</step>
+        </parameter>
+        <collection name="Param" datasize="290" arraysize="1">
+            <parameter name="PluginName" type="string" arraysize="1">
+                <maximum>17</maximum>
+            </parameter>
+            <parameter name="LibraryName" type="string" arraysize="1">
+                <maximum>17</maximum>
+            </parameter>
+            <collection name="Bank" datasize="256" arraysize="1">
+                <parameter name="Value" type="int32_t" arraysize="64">
+                    <minimum>-2147483648</minimum>
+                    <maximum>2147483647</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+</collections>
+</function>

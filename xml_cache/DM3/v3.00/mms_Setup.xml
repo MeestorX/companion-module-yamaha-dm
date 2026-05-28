@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<function name="Setup" collections="75" parameters="103" datasize="25041" stringsize="66">
+<collections>
+    <collection name="Automixer" datasize="2" arraysize="1">
+        <collection name="Master" datasize="1" arraysize="2">
+            <parameter name="Bypass" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="InsertActive" datasize="1" arraysize="1">
+        <parameter name="On" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>1</default>
+            <step>1</step>
+            <kind>31</kind>
+        </parameter>
+    </collection>
+    <collection name="PhantomMaster" datasize="1" arraysize="1">
+        <parameter name="On" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>1</default>
+            <step>1</step>
+            <kind>31</kind>
+        </parameter>
+    </collection>
+    <collection name="MuteSafe" datasize="22" arraysize="1">
+        <collection name="InputChannel" datasize="1" arraysize="16">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="StInChannel" datasize="1" arraysize="2">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="FxRtnChannel" datasize="1" arraysize="4">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="MuteMaster" datasize="65" arraysize="6">
+        <parameter name="On" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+            <kind>31</kind>
+        </parameter>
+        <parameter name="Name" type="string" arraysize="1">
+            <maximum>64</maximum>
+        </parameter>
+    </collection>
+    <collection name="Cue" datasize="7" arraysize="1">
+        <parameter name="Mode" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <collection name="Input" datasize="3" arraysize="1">
+            <parameter name="Point" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="Trim" type="int16_t" arraysize="1">
+                <minimum>-3000</minimum>
+                <maximum>2000</maximum>
+                <default>0</default>
+                <step>100</step>
+                <unit>dB</unit>
+                <scaling>100</scaling>
+                <kind>5</kind>
+            </parameter>
+        </collection>
+        <collection name="Output" datasize="3" arraysize="1">
+            <parameter name="Point" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="Trim" type="int16_t" arraysize="1">
+                <minimum>-3000</minimum>
+                <maximum>2000</maximum>
+                <default>0</default>
+                <step>100</step>
+                <unit>dB</unit>
+                <scaling>100</scaling>
+                <kind>5</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="Monitor" datasize="22" arraysize="1">
+        <collection name="Out" datasize="1" arraysize="1">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="Level" datasize="2" arraysize="1">
+            <parameter name="Level" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>0</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <nominal>0</nominal>
+                <scaling>100</scaling>
+                <kind>27</kind>
+            </parameter>
+        </collection>
+        <collection name="Cue" datasize="1" arraysize="1">
+            <parameter name="Interruption" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="Mode" datasize="1" arraysize="1">
+            <parameter name="Mono" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="Source" datasize="12" arraysize="1">
+            <collection name="Mix" datasize="1" arraysize="6">
+                <parameter name="On" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="Matrix" datasize="1" arraysize="2">
+                <parameter name="On" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="Stereo" datasize="1" arraysize="2">
+                <parameter name="On" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="Playback" datasize="1" arraysize="1">
+                <parameter name="On" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="UsbIn" datasize="1" arraysize="1">
+                <parameter name="On" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="Delay" datasize="5" arraysize="1">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Time" type="uint32_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1000000</maximum>
+                <default>0</default>
+                <step>5</step>
+                <unit>ms</unit>
+                <scaling>1000</scaling>
+                <kind>6</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="Oscillator" datasize="65" arraysize="1">
+        <parameter name="Level" type="int16_t" arraysize="1">
+            <minimum>-9600</minimum>
+            <maximum>0</maximum>
+            <default>-4000</default>
+            <step>100</step>
+            <unit>dB</unit>
+            <scaling>100</scaling>
+            <kind>5</kind>
+        </parameter>
+        <parameter name="Mode" type="string" arraysize="1">
+            <maximum>12</maximum>
+            <default>PINK</default>
+        </parameter>
+        <collection name="HPF" datasize="5" arraysize="1">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Frequency" type="uint32_t" arraysize="1">
+                <minimum>200</minimum>
+                <maximum>200000</maximum>
+                <default>800</default>
+                <step>1</step>
+                <unit>Hz</unit>
+                <scaling>10</scaling>
+                <kind>35</kind>
+            </parameter>
+        </collection>
+        <collection name="LPF" datasize="5" arraysize="1">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Frequency" type="uint32_t" arraysize="1">
+                <minimum>200</minimum>
+                <maximum>200000</maximum>
+                <default>100000</default>
+                <step>1</step>
+                <unit>Hz</unit>
+                <scaling>10</scaling>
+                <kind>35</kind>
+            </parameter>
+        </collection>
+        <collection name="SineWave" datasize="4" arraysize="1">
+            <parameter name="Frequency" type="uint32_t" arraysize="1">
+                <minimum>200</minimum>
+                <maximum>200000</maximum>
+                <default>10000</default>
+                <step>1</step>
+                <unit>Hz</unit>
+                <scaling>10</scaling>
+                <kind>35</kind>
+            </parameter>
+        </collection>
+        <collection name="BurstNoise" datasize="3" arraysize="1">
+            <parameter name="Width" type="uint16_t" arraysize="1">
+                <minimum>100</minimum>
+                <maximum>10000</maximum>
+                <default>100</default>
+                <step>100</step>
+                <unit>ms</unit>
+            </parameter>
+            <parameter name="Interval" type="uint8_t" arraysize="1">
+                <minimum>1</minimum>
+                <maximum>30</maximum>
+                <default>1</default>
+                <step>1</step>
+                <unit>sec</unit>
+            </parameter>
+        </collection>
+        <collection name="SendAssign" datasize="34" arraysize="1">
+            <parameter name="InputChannel" type="uint8_t" arraysize="16">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="StInChannel" type="uint8_t" arraysize="2">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="FxRtnChannel" type="uint8_t" arraysize="4">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Mix" type="uint8_t" arraysize="6">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Matrix" type="uint8_t" arraysize="2">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="FxBus" type="uint8_t" arraysize="2">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Stereo" type="uint8_t" arraysize="2">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="Recorder" datasize="34" arraysize="1">
+        <collection name="Record" datasize="30" arraysize="1">
+            <parameter name="Level" type="int16_t" arraysize="1">
+                <minimum>-9600</minimum>
+                <maximum>2400</maximum>
+                <default>0</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <nominal>0</nominal>
+                <scaling>100</scaling>
+                <kind>5</kind>
+            </parameter>
+            <parameter name="Format" type="string" arraysize="1">
+                <maximum>20</maximum>
+                <default></default>
+            </parameter>
+            <collection name="OutputPort" datasize="4" arraysize="2">
+                <collection name="Patch" datasize="4" arraysize="1">
+                    <parameter name="Source" type="uint32_t" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>0xFFFFFFFFUL</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+        <collection name="Playback" datasize="4" arraysize="1">
+            <parameter name="Level" type="int16_t" arraysize="1">
+                <minimum>-9600</minimum>
+                <maximum>2400</maximum>
+                <default>0</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <nominal>0</nominal>
+                <scaling>100</scaling>
+                <kind>5</kind>
+            </parameter>
+            <parameter name="Mode" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>3</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="AutoScroll" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="Meter" datasize="3" arraysize="1">
+        <collection name="Input" datasize="1" arraysize="1">
+            <parameter name="Point" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>2</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="Output" datasize="1" arraysize="1">
+            <parameter name="Point" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>2</maximum>
+                <default>2</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="PeakHold" datasize="1" arraysize="1">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="MIDI" datasize="24226" arraysize="1">
+        <parameter name="Echo" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+            <kind>31</kind>
+        </parameter>
+        <collection name="Port" datasize="24" arraysize="1">
+            <parameter name="Tx" type="string" arraysize="1">
+                <maximum>12</maximum>
+                <default>USB</default>
+            </parameter>
+            <parameter name="Rx" type="string" arraysize="1">
+                <maximum>12</maximum>
+                <default>USB</default>
+            </parameter>
+        </collection>
+        <collection name="Channel" datasize="2" arraysize="1">
+            <parameter name="Tx" type="uint8_t" arraysize="1">
+                <minimum>1</minimum>
+                <maximum>16</maximum>
+                <default>1</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="Rx" type="uint8_t" arraysize="1">
+                <minimum>1</minimum>
+                <maximum>16</maximum>
+                <default>1</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="ProgramChange" datasize="18437" arraysize="1">
+            <parameter name="Tx" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Rx" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <collection name="Mode" datasize="3" arraysize="1">
+                <parameter name="Type" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+                <parameter name="Omni" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="Bank" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="Bank" datasize="1152" arraysize="16">
+                <collection name="ProgramNumber" datasize="9" arraysize="128">
+                    <parameter name="AssignedType" type="uint8_t" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                    </parameter>
+                    <parameter name="AssignedNumber" type="string" arraysize="1">
+                        <maximum>8</maximum>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+        <collection name="ControlChange" datasize="5762" arraysize="1">
+            <parameter name="Tx" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Rx" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <collection name="Event" datasize="48" arraysize="120">
+                <parameter name="Param" type="string" arraysize="3">
+                    <maximum>16</maximum>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="Scene" datasize="9" arraysize="1">
+        <parameter name="EditFlag" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+            <kind>31</kind>
+        </parameter>
+        <parameter name="LastScene" type="string" arraysize="1">
+            <maximum>8</maximum>
+        </parameter>
+    </collection>
+    <collection name="RecallSafe" datasize="191" arraysize="1">
+        <parameter name="DataFormat" type="string" arraysize="1">
+            <maximum>4</maximum>
+            <default>TF</default>
+        </parameter>
+        <collection name="TF" datasize="187" arraysize="1">
+            <collection name="InputChannel" datasize="5" arraysize="16">
+                <parameter name="SafeOn" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="Target" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+            <collection name="StInChannel" datasize="5" arraysize="2">
+                <parameter name="SafeOn" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="Target" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+            <collection name="FxRtnChannel" datasize="5" arraysize="4">
+                <parameter name="SafeOn" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="Target" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+            <collection name="Mix" datasize="6" arraysize="6">
+                <parameter name="SafeOn" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="Target" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+                <parameter name="WithSend" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="Matrix" datasize="6" arraysize="2">
+                <parameter name="SafeOn" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="Target" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+                <parameter name="WithSend" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="FxBus" datasize="6" arraysize="2">
+                <parameter name="SafeOn" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="Target" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+                <parameter name="WithSend" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="Stereo" datasize="5" arraysize="2">
+                <parameter name="SafeOn" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="Target" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+            <collection name="InputPatch" datasize="1" arraysize="1">
+                <parameter name="SafeOn" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="OutputPatch" datasize="1" arraysize="1">
+                <parameter name="SafeOn" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="ChannelLink" datasize="1" arraysize="1">
+                <parameter name="SafeOn" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="MixSetup" datasize="1" arraysize="3">
+                <parameter name="SafeOn" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="MatrixSetup" datasize="1" arraysize="1">
+                <parameter name="SafeOn" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="Library" datasize="6" arraysize="1">
+        <collection name="TF" datasize="6" arraysize="1">
+            <collection name="Filter" datasize="6" arraysize="1">
+                <parameter name="HA" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="InputSelect" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="Name" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="SendTo" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="FX" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="GEQ" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="CommSession" datasize="24" arraysize="1">
+        <collection name="MobileMix" datasize="24" arraysize="1">
+            <parameter name="Password" type="string" arraysize="1">
+                <maximum>24</maximum>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="QuickConfig" datasize="1" arraysize="1">
+        <parameter name="On" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>1</default>
+            <step>1</step>
+            <kind>31</kind>
+        </parameter>
+    </collection>
+    <collection name="QuickConfigWzOutput" datasize="1" arraysize="1">
+        <parameter name="On" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>1</default>
+            <step>1</step>
+            <kind>31</kind>
+        </parameter>
+    </collection>
+    <collection name="WordClock" datasize="16" arraysize="1">
+        <parameter name="Source" type="string" arraysize="1">
+            <maximum>16</maximum>
+            <default>INT96000</default>
+        </parameter>
+    </collection>
+    <collection name="Dante" datasize="20" arraysize="1">
+        <collection name="RemoteDevice" datasize="1" arraysize="16">
+            <parameter name="WithRecall" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="Config" datasize="4" arraysize="1">
+            <parameter name="ReceiveLatency" type="uint16_t" arraysize="1">
+                <minimum>25</minimum>
+                <maximum>4000</maximum>
+                <default>100</default>
+                <step>1</step>
+                <unit>ms</unit>
+                <scaling>100</scaling>
+            </parameter>
+            <parameter name="BitDepth" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>32</maximum>
+                <default>24</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="PreferredMaster" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+</collections>
+</function>

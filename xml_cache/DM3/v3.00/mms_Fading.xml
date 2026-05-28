@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<function name="Fading" collections="9" parameters="22" datasize="172" stringsize="46">
+<collections>
+    <collection name="Fading" datasize="172" arraysize="1">
+        <parameter name="Time" type="uint16_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>600</maximum>
+            <default>0</default>
+            <step>1</step>
+            <unit>sec</unit>
+            <scaling>10</scaling>
+        </parameter>
+        <collection name="InputChannel" datasize="5" arraysize="16">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Target" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>-32768</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <nominal>0</nominal>
+                <scaling>100</scaling>
+                <kind>27</kind>
+            </parameter>
+            <parameter name="Level" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>-32768</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <nominal>0</nominal>
+                <scaling>100</scaling>
+                <kind>27</kind>
+            </parameter>
+        </collection>
+        <collection name="StInChannel" datasize="5" arraysize="2">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Target" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>-32768</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <nominal>0</nominal>
+                <scaling>100</scaling>
+                <kind>27</kind>
+            </parameter>
+            <parameter name="Level" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>-32768</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <nominal>0</nominal>
+                <scaling>100</scaling>
+                <kind>27</kind>
+            </parameter>
+        </collection>
+        <collection name="FxRtnChannel" datasize="5" arraysize="4">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Target" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>-32768</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <nominal>0</nominal>
+                <scaling>100</scaling>
+                <kind>27</kind>
+            </parameter>
+            <parameter name="Level" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>-32768</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <nominal>0</nominal>
+                <scaling>100</scaling>
+                <kind>27</kind>
+            </parameter>
+        </collection>
+        <collection name="Mix" datasize="5" arraysize="6">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Target" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>-32768</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <nominal>0</nominal>
+                <scaling>100</scaling>
+                <kind>27</kind>
+            </parameter>
+            <parameter name="Level" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>-32768</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <nominal>0</nominal>
+                <scaling>100</scaling>
+                <kind>27</kind>
+            </parameter>
+        </collection>
+        <collection name="Matrix" datasize="5" arraysize="2">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Target" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>-32768</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <nominal>0</nominal>
+                <scaling>100</scaling>
+                <kind>27</kind>
+            </parameter>
+            <parameter name="Level" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>-32768</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <nominal>0</nominal>
+                <scaling>100</scaling>
+                <kind>27</kind>
+            </parameter>
+        </collection>
+        <collection name="FxBus" datasize="5" arraysize="2">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Target" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>-32768</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <nominal>0</nominal>
+                <scaling>100</scaling>
+                <kind>27</kind>
+            </parameter>
+            <parameter name="Level" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>-32768</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <nominal>0</nominal>
+                <scaling>100</scaling>
+                <kind>27</kind>
+            </parameter>
+        </collection>
+        <collection name="Stereo" datasize="5" arraysize="2">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Target" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>-32768</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <nominal>0</nominal>
+                <scaling>100</scaling>
+                <kind>27</kind>
+            </parameter>
+            <parameter name="Level" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>-32768</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <nominal>0</nominal>
+                <scaling>100</scaling>
+                <kind>27</kind>
+            </parameter>
+        </collection>
+    </collection>
+</collections>
+</function>

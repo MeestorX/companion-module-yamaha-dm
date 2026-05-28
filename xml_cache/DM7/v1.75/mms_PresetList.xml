@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<function name="PresetList" collections="75" parameters="36" datasize="164000" stringsize="36">
+<collections>
+    <collection name="Factory" datasize="40000" arraysize="1">
+        <collection name="CHInput" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="CHOutput" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="DanteInputPatch" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="PEQ" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="GEQ" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="FX" datasize="12000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="300">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="REVX" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="HQ_PITCH" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="User" datasize="124000" arraysize="1">
+        <collection name="CHInput" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="CHOutput" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="Actor" datasize="8000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="200">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="DanteInputPatch" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="Focus" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="PEQ" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="GEQ" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="FX" datasize="12000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="300">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="REVX" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="HQ_PITCH" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="COMP276" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="EQUALIZER601" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="OPENDECK" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="PORTICO5033" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="PORTICO5043" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="U76" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="OPT2A" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="EQ1A" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="DYNAMICEQ" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="MAX100" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="DUAL_PHASER" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="VINTAGE_PHASER" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="BUSSCOMP369" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="MBC4" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="DYNAMICEQ4" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="ANALOG_DELAY" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="PORTICO5045" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="DANSE" datasize="4000" arraysize="1">
+            <collection name="Info" datasize="40" arraysize="100">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>40</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+</collections>
+</function>

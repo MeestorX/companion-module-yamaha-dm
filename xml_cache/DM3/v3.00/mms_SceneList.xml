@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<function name="SceneList" collections="3" parameters="1" datasize="8000" stringsize="1">
+<collections>
+    <collection name="Bank" datasize="4000" arraysize="2">
+        <collection name="Info" datasize="40" arraysize="100">
+            <parameter name="FileName" type="string" arraysize="1">
+                <maximum>40</maximum>
+                <default></default>
+            </parameter>
+        </collection>
+    </collection>
+</collections>
+</function>

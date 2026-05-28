@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<function name="Status" collections="31" parameters="78" datasize="25909" stringsize="48">
+<collections>
+    <collection name="WordClock" datasize="27" arraysize="1">
+        <parameter name="Source" type="string" arraysize="1">
+            <maximum>16</maximum>
+        </parameter>
+        <parameter name="LockFs" type="uint32_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>96000</maximum>
+            <default>0</default>
+            <step>1</step>
+            <unit>Hz</unit>
+        </parameter>
+        <collection name="Slot" datasize="7" arraysize="1">
+            <parameter name="LockFs" type="uint32_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>192000</maximum>
+                <default>0</default>
+                <step>1</step>
+                <unit>Hz</unit>
+            </parameter>
+            <parameter name="LockStatus" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="Synchronization" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="Availability" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="CommSession" datasize="2" arraysize="1">
+        <collection name="MMSSync" datasize="1" arraysize="1">
+            <parameter name="SessionNum" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>3</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="SCP" datasize="1" arraysize="1">
+            <parameter name="SessionNum" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>10</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="CardSlot" datasize="33" arraysize="1">
+        <parameter name="CardType" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>2</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <parameter name="CardName" type="string" arraysize="1">
+            <maximum>32</maximum>
+        </parameter>
+    </collection>
+    <collection name="USBToHost" datasize="1" arraysize="1">
+        <parameter name="ConnectStatus" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+    </collection>
+    <collection name="USBStorage" datasize="1" arraysize="1">
+        <parameter name="ConnectStatus" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>3</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+    </collection>
+    <collection name="CPULoad" datasize="2" arraysize="1">
+        <parameter name="Total" type="uint16_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1000</maximum>
+            <default>0</default>
+            <step>1</step>
+            <unit>%</unit>
+            <scaling>10</scaling>
+        </parameter>
+    </collection>
+    <collection name="BatteryStatus" datasize="1" arraysize="1">
+        <parameter name="LowVoltage" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+    </collection>
+    <collection name="QuickConfig" datasize="1" arraysize="1">
+        <parameter name="Patching" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+            <kind>31</kind>
+        </parameter>
+    </collection>
+    <collection name="Recorder" datasize="20699" arraysize="1">
+        <collection name="PlayList" datasize="20696" arraysize="1">
+            <parameter name="DeviceKind" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>2</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="DirPath" type="string" arraysize="1">
+                <maximum>512</maximum>
+            </parameter>
+            <parameter name="TotalSongs" type="uint32_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0xFFFFFFFFUL</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="State" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <collection name="Sort" datasize="2" arraysize="1">
+                <parameter name="Mode" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>4</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+                <parameter name="Direction" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+            <collection name="Song" datasize="134" arraysize="150">
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                </parameter>
+                <parameter name="ArtistName" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                </parameter>
+                <parameter name="PlayTime" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <unit>sec</unit>
+                </parameter>
+                <parameter name="CheckMark" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+                <parameter name="Attribute" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFF</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+            <collection name="Current" datasize="76" arraysize="1">
+                <parameter name="SongNo" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                </parameter>
+                <parameter name="PlayTime" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <unit>sec</unit>
+                </parameter>
+                <parameter name="PlayPosition" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <unit>sec</unit>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="Transport" datasize="3" arraysize="1">
+            <parameter name="State" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>3</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="RecState" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>4</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="PlayContinue" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="Dante" datasize="5078" arraysize="1">
+        <parameter name="Error" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <collection name="InputPort" datasize="102" arraysize="16">
+            <collection name="Patch" datasize="102" arraysize="1">
+                <parameter name="DeviceLabel" type="string" arraysize="1">
+                    <maximum>32</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="UnitID" type="uint16_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFF</maximum>
+                    <default>0xFFFF</default>
+                    <step>1</step>
+                </parameter>
+                <parameter name="ModelName" type="string" arraysize="1">
+                    <maximum>32</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="ChannelID" type="uint16_t" arraysize="1">
+                    <minimum>1</minimum>
+                    <maximum>65535</maximum>
+                    <default>65535</default>
+                    <step>1</step>
+                </parameter>
+                <parameter name="ChannelIDStr" type="string" arraysize="1">
+                    <maximum>32</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="Status" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>3</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+                <parameter name="CandidateStatus" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>5</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="OutputPort" datasize="70" arraysize="16">
+            <collection name="Patch" datasize="70" arraysize="1">
+                <parameter name="DeviceLabel" type="string" arraysize="1">
+                    <maximum>32</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="UnitID" type="uint16_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFF</maximum>
+                    <default>0xFFFF</default>
+                    <step>1</step>
+                </parameter>
+                <parameter name="ModelName" type="string" arraysize="1">
+                    <maximum>32</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="ChannelID" type="uint16_t" arraysize="1">
+                    <minimum>1</minimum>
+                    <maximum>65535</maximum>
+                    <default>65535</default>
+                    <step>1</step>
+                </parameter>
+                <parameter name="Status" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>3</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+                <parameter name="CandidateStatus" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>5</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="RemoteDevice" datasize="132" arraysize="16">
+            <parameter name="48VMaster" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="System" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>12</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="Sync" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>12</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="FirmwareVersion" type="string" arraysize="1">
+                <maximum>32</maximum>
+                <default></default>
+            </parameter>
+            <parameter name="HardwareVersion" type="string" arraysize="1">
+                <maximum>32</maximum>
+                <default></default>
+            </parameter>
+            <parameter name="BootVersion" type="string" arraysize="1">
+                <maximum>32</maximum>
+                <default></default>
+            </parameter>
+            <parameter name="ManufactureVersion" type="string" arraysize="1">
+                <maximum>32</maximum>
+                <default></default>
+            </parameter>
+            <collection name="HeadAmp" datasize="1" arraysize="1">
+                <parameter name="Enable" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="Config" datasize="59" arraysize="1">
+            <parameter name="DeviceLabel" type="string" arraysize="1">
+                <maximum>32</maximum>
+                <default></default>
+            </parameter>
+            <parameter name="DeviceID" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0x1F</maximum>
+                <default>1</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="SoundNetworkMode" type="string" arraysize="1">
+                <maximum>16</maximum>
+                <default>Daisy Chain</default>
+            </parameter>
+            <parameter name="ReceiveLatency" type="uint16_t" arraysize="1">
+                <minimum>25</minimum>
+                <maximum>4000</maximum>
+                <default>100</default>
+                <step>1</step>
+                <unit>ms</unit>
+                <scaling>100</scaling>
+            </parameter>
+            <parameter name="BitDepth" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>32</maximum>
+                <default>24</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="PreferredMaster" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="PullUpDown" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="AES67Mode" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="DeviceLockStatus" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="EnableSyncToExternal" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ClockStatus" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="Ready" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="DanteInformation" datasize="2" arraysize="1">
+            <parameter name="System" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>11</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="Sync" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>12</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="DDM" datasize="152" arraysize="1">
+            <parameter name="ConnectionState" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0xFF</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <collection name="DomainInfo" datasize="149" arraysize="1">
+                <parameter name="Kind" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFF</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+                <parameter name="Uuid" type="uint8_t" arraysize="16">
+                    <minimum>0</minimum>
+                    <maximum>0xFF</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+                <parameter name="DomainName" type="string" arraysize="1">
+                    <maximum>32</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="LoginState" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFF</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+                <parameter name="LoginName" type="string" arraysize="1">
+                    <maximum>99</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+            <collection name="ControlPolicy" datasize="2" arraysize="1">
+                <parameter name="ControlLocal" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>3</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+                <parameter name="ControlRemote" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>3</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="TestRecPlayer" datasize="64" arraysize="1">
+        <parameter name="Error" type="string" arraysize="1">
+            <maximum>64</maximum>
+            <default></default>
+        </parameter>
+    </collection>
+</collections>
+</function>

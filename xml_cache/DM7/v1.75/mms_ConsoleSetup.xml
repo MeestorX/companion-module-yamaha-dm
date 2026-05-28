@@ -1,0 +1,2454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<function name="ConsoleSetup" collections="193" parameters="313" datasize="203251" stringsize="47">
+<collections>
+    <collection name="Preference" datasize="68" arraysize="1">
+        <collection name="Confirmation" datasize="1" arraysize="1">
+            <parameter name="Store" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Update" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Recall" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="PatchChange" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="PatchSteal" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="GlobalPaste" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="AutoSelect" datasize="1" arraysize="1">
+            <parameter name="Input" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Output" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="UseFaderTouch" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="TouchSense" datasize="1" arraysize="1">
+            <parameter name="Sensitivity" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>4</maximum>
+                <default>1</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="FaderBankSelLink" datasize="1" arraysize="1">
+            <parameter name="Input" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Output" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Custom" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="Light" datasize="1" arraysize="1">
+            <parameter name="Assistance" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="DCARollOut" datasize="1" arraysize="1">
+            <parameter name="RollOut" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="OnKeys" datasize="2" arraysize="1">
+            <parameter name="DuringSOF" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="DuringMUTE" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="SelCueLink" datasize="1" arraysize="1">
+            <parameter name="DuringSOF" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="ErrorMsg" datasize="1" arraysize="1">
+            <parameter name="DigitalIO" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="MidiIO" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="DanteAlert" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="CueSelLink" datasize="1" arraysize="1">
+            <parameter name="Input" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Output" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="SurfaceSetting" datasize="57" arraysize="1">
+            <parameter name="BankSelect" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>3</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <collection name="Bank" datasize="14" arraysize="4">
+                <parameter name="Name" type="string" arraysize="1">
+                    <maximum>12</maximum>
+                    <default></default>
+                </parameter>
+                <collection name="Course" datasize="1" arraysize="2">
+                    <parameter name="BayLink" type="bit" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>31</kind>
+                    </parameter>
+                    <parameter name="SelLink" type="bit" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>1</default>
+                        <step>1</step>
+                        <kind>31</kind>
+                    </parameter>
+                    <parameter name="SendsOnFaderLink" type="bit" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>1</default>
+                        <step>1</step>
+                        <kind>31</kind>
+                    </parameter>
+                    <parameter name="SplitSideLink" type="bit" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>1</default>
+                        <step>1</step>
+                        <kind>31</kind>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="UserDefined" datasize="51332" arraysize="1">
+        <collection name="Course" datasize="1" arraysize="2">
+            <parameter name="BankSelect" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>3</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="Knobs" datasize="1" arraysize="1">
+            <parameter name="BankSelect" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>3</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="Bank" datasize="5248" arraysize="4">
+            <collection name="Keys" datasize="640" arraysize="6">
+                <parameter name="Setting" type="string" arraysize="1">
+                    <maximum>128</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="UDefSendAssign" type="uint32_t" arraysize="2">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+                <parameter name="DirectPlayFile" type="string" arraysize="1">
+                    <maximum>256</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="BookmarkViewName" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="BookmarkOptionData" type="string" arraysize="1">
+                    <maximum>128</maximum>
+                    <default></default>
+                </parameter>
+                <collection name="Label" datasize="56" arraysize="1">
+                    <parameter name="ShortName" type="string" arraysize="4">
+                        <maximum>10</maximum>
+                        <default></default>
+                    </parameter>
+                    <parameter name="Color" type="string" arraysize="1">
+                        <maximum>16</maximum>
+                        <default></default>
+                    </parameter>
+                </collection>
+            </collection>
+            <collection name="Knobs" datasize="192" arraysize="4">
+                <parameter name="Setting" type="string" arraysize="1">
+                    <maximum>128</maximum>
+                    <default></default>
+                </parameter>
+                <collection name="Label" datasize="64" arraysize="1">
+                    <parameter name="ShortName" type="string" arraysize="3">
+                        <maximum>16</maximum>
+                        <default></default>
+                    </parameter>
+                    <parameter name="Color" type="string" arraysize="1">
+                        <maximum>16</maximum>
+                        <default></default>
+                    </parameter>
+                </collection>
+            </collection>
+            <collection name="AssignableEncoder" datasize="128" arraysize="5">
+                <parameter name="Setting" type="string" arraysize="1">
+                    <maximum>128</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="GUI" datasize="1" arraysize="1">
+            <parameter name="BankSelect" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>3</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="GUIBank" datasize="7584" arraysize="4">
+            <collection name="Keys" datasize="632" arraysize="12">
+                <parameter name="Setting" type="string" arraysize="1">
+                    <maximum>128</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="DirectPlayFile" type="string" arraysize="1">
+                    <maximum>256</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="BookmarkViewName" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="BookmarkOptionData" type="string" arraysize="1">
+                    <maximum>128</maximum>
+                    <default></default>
+                </parameter>
+                <collection name="Label" datasize="56" arraysize="1">
+                    <parameter name="ShortName" type="string" arraysize="4">
+                        <maximum>10</maximum>
+                        <default></default>
+                    </parameter>
+                    <parameter name="Color" type="string" arraysize="1">
+                        <maximum>16</maximum>
+                        <default></default>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="Delay" datasize="2" arraysize="1">
+        <parameter name="Scale" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>4</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <parameter name="Frame" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>8</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+    </collection>
+    <collection name="RTA" datasize="3" arraysize="2">
+        <collection name="Offset" datasize="1" arraysize="1">
+            <parameter name="Gain" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>30</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="Graph" datasize="1" arraysize="1">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="Hold" datasize="1" arraysize="1">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="Scene" datasize="64016" arraysize="1">
+        <collection name="Bank" datasize="8" arraysize="2">
+            <parameter name="SelectedScene" type="string" arraysize="1">
+                <maximum>8</maximum>
+                <default></default>
+            </parameter>
+        </collection>
+        <collection name="GlobalPasteGroup" datasize="2000" arraysize="32">
+            <parameter name="Select" type="uint32_t" arraysize="500">
+                <minimum>0</minimum>
+                <maximum>99999</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="Library" datasize="144" arraysize="1">
+        <collection name="Preset" datasize="4" arraysize="36">
+            <collection name="Last" datasize="4" arraysize="1">
+                <parameter name="PresetNo" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="Common" datasize="1" arraysize="1">
+        <collection name="DCAGroupRollOut" datasize="1" arraysize="1">
+            <parameter name="TargetCH" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>16</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="GUI" datasize="27" arraysize="1">
+        <collection name="ChannelName" datasize="17" arraysize="1">
+            <collection name="Icon" datasize="1" arraysize="1">
+                <parameter name="Hide" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="Info" datasize="16" arraysize="1">
+                <parameter name="Type" type="string" arraysize="1">
+                    <maximum>16</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="Rack" datasize="1" arraysize="1">
+            <parameter name="Assist" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="Patch" datasize="1" arraysize="1">
+            <parameter name="GridView" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="TimeDisp" datasize="8" arraysize="1">
+            <parameter name="Type" type="string" arraysize="1">
+                <maximum>8</maximum>
+                <default>Clock</default>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="Tap" datasize="2" arraysize="1">
+        <parameter name="Interval" type="uint16_t" arraysize="1">
+            <minimum>200</minimum>
+            <maximum>2400</maximum>
+            <default>500</default>
+            <step>1</step>
+            <unit>ms</unit>
+        </parameter>
+    </collection>
+    <collection name="ImmersiveSound" datasize="128" arraysize="1">
+        <collection name="AFCImage" datasize="128" arraysize="1">
+            <collection name="OBA" datasize="128" arraysize="1">
+                <collection name="Object" datasize="1" arraysize="128">
+                    <parameter name="Control" type="bit" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="DAWRemote" datasize="10" arraysize="1">
+        <parameter name="Interface" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>2</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <parameter name="DeviceSelect" type="int8_t" arraysize="1">
+            <minimum>-1</minimum>
+            <maximum>24</maximum>
+            <default>-1</default>
+            <step>1</step>
+        </parameter>
+        <parameter name="IPv4Address" type="uint32_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>0xFFFFFFFFUL</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <parameter name="RecallLink" type="bit" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+            <kind>31</kind>
+        </parameter>
+        <parameter name="DAWMode" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>1</default>
+            <step>1</step>
+        </parameter>
+        <parameter name="SelectedFunction" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>5</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <parameter name="BayAssignNum" type="uint8_t" arraysize="1">
+            <minimum>1</minimum>
+            <maximum>2</maximum>
+            <default>2</default>
+            <step>1</step>
+        </parameter>
+    </collection>
+    <collection name="Cue" datasize="209" arraysize="1">
+        <collection name="CueButton" datasize="209" arraysize="1">
+            <collection name="UseForSurroundCue" datasize="1" arraysize="1">
+                <parameter name="Enable" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="InputChannel" datasize="1" arraysize="120">
+                <parameter name="Assign" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>3</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+            <collection name="Mix" datasize="1" arraysize="48">
+                <parameter name="Assign" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>3</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+            <collection name="Matrix" datasize="1" arraysize="12">
+                <parameter name="Assign" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>3</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+            <collection name="Stereo" datasize="1" arraysize="4">
+                <parameter name="Assign" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>3</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+            <collection name="DCA" datasize="1" arraysize="24">
+                <parameter name="Assign" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>3</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="Unit" datasize="3" arraysize="1">
+        <parameter name="Split" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <collection name="SplitPoint" datasize="2" arraysize="1">
+            <parameter name="InputChannel" type="uint8_t" arraysize="1">
+                <minimum>60</minimum>
+                <maximum>120</maximum>
+                <default>120</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="Mix" type="uint8_t" arraysize="1">
+                <minimum>12</minimum>
+                <maximum>48</maximum>
+                <default>48</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="Course" datasize="588" arraysize="2">
+        <parameter name="SelectedCH" type="uint32_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>0xFFFFFFFFUL</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <parameter name="SplitSide" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <parameter name="UDKeysMode" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>2</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <collection name="SelectedSend" datasize="1" arraysize="1">
+            <parameter name="StripId" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>59</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="FaderBank" datasize="80" arraysize="2">
+            <parameter name="SelectedBank" type="uint32_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0xFFFFFFFFUL</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <collection name="InputChannelBlock" datasize="4" arraysize="10">
+                <parameter name="SelectedCH" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+            <collection name="MixBlock" datasize="4" arraysize="4">
+                <parameter name="SelectedCH" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+            <collection name="MatrixBlock" datasize="4" arraysize="1">
+                <parameter name="SelectedCH" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+            <collection name="StereoBlock" datasize="16" arraysize="1">
+                <parameter name="SelectedCH" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+                <collection name="ChStrip" datasize="1" arraysize="12">
+                    <parameter name="SelectedSide" type="uint8_t" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+        <collection name="CustomFader" datasize="100" arraysize="4">
+            <collection name="Bank" datasize="20" arraysize="5">
+                <parameter name="SelectedCH" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+                <collection name="ChStrip" datasize="1" arraysize="12">
+                    <parameter name="SelectedSide" type="uint8_t" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                    </parameter>
+                </collection>
+                <collection name="MasterStrip" datasize="1" arraysize="4">
+                    <parameter name="SelectedSide" type="uint8_t" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+        <collection name="EncoderAssign" datasize="1" arraysize="1">
+            <parameter name="Mode" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="AssignableEncoder" datasize="1" arraysize="1">
+            <parameter name="Select" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>4</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="Overview" datasize="19" arraysize="1">
+            <collection name="MeterBridge" datasize="19" arraysize="1">
+                <parameter name="DisplayMode" type="string" arraysize="1">
+                    <maximum>19</maximum>
+                    <default>In</default>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="TemporaryLicense" datasize="2" arraysize="1">
+        <collection name="DEK-DM7-TH" datasize="1" arraysize="1">
+            <parameter name="Active" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="DEK-DM7-BR" datasize="1" arraysize="1">
+            <parameter name="Active" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="DM7Control" datasize="1" arraysize="1">
+        <collection name="JogWheel" datasize="1" arraysize="1">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="GlobalPaste" datasize="8583" arraysize="1">
+        <collection name="InputChannel" datasize="65" arraysize="120">
+            <parameter name="All" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ChannelPatch" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ChannelName" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Phase" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ChannelGain" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Filters" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="EQ" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="EQTheatreSelect" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Proc" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Dynamics" type="bit" arraysize="2">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="DynamicsTheatreSelect" type="bit" arraysize="2">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Delay" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="DirectOutPatch" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="DirectOutOn" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Insert" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="DCAAssignment" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="MuteAssignment" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ChannelOn" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Fader" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="PanRouting" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <collection name="HeadAmp" datasize="1" arraysize="1">
+                <parameter name="Gain" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="Phase" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="MSDecode" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="ToMix" datasize="1" arraysize="48">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="ToMatrix" datasize="1" arraysize="12">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="ToSurround" datasize="1" arraysize="1">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="Mix" datasize="14" arraysize="48">
+            <parameter name="All" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ChannelPatch" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ChannelName" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Filters" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="EQ" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="EQTheatreSelect" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Proc" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Dynamics" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="DynamicsTheatreSelect" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Delay" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Insert" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="DCAAssignment" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="MuteAssignment" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ChannelOn" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Fader" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="PanRouting" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <collection name="ToMatrix" datasize="1" arraysize="12">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="Matrix" datasize="2" arraysize="12">
+            <parameter name="All" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ChannelPatch" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ChannelName" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Filters" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="EQ" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="EQTheatreSelect" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Proc" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Dynamics" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="DynamicsTheatreSelect" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Delay" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Insert" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="DCAAssignment" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="MuteAssignment" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ChannelOn" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Fader" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="PanRouting" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="Stereo" datasize="14" arraysize="4">
+            <parameter name="All" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ChannelPatch" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ChannelName" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Filters" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="EQ" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="EQTheatreSelect" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Proc" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Dynamics" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="DynamicsTheatreSelect" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Delay" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Insert" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="DCAAssignment" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="MuteAssignment" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ChannelOn" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Fader" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="PanRouting" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <collection name="ToMatrix" datasize="1" arraysize="12">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="DCA" datasize="1" arraysize="24">
+            <parameter name="ChannelName" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ChannelOn" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Fader" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="Console" datasize="2" arraysize="1">
+            <collection name="Course" datasize="1" arraysize="2">
+                <collection name="FaderBank" datasize="1" arraysize="1">
+                    <parameter name="SelectedBank" type="bit" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>31</kind>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+        <collection name="TapTempo" datasize="1" arraysize="5">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="DCATemplate" datasize="85" arraysize="40">
+        <parameter name="Stored" type="bit" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+            <kind>31</kind>
+        </parameter>
+        <collection name="Label" datasize="84" arraysize="1">
+            <parameter name="Name" type="string" arraysize="1">
+                <maximum>64</maximum>
+                <default></default>
+            </parameter>
+            <parameter name="Color" type="string" arraysize="1">
+                <maximum>8</maximum>
+                <default>Yellow</default>
+                <kind>4</kind>
+            </parameter>
+            <parameter name="Icon" type="string" arraysize="1">
+                <maximum>12</maximum>
+                <default>Blank</default>
+                <kind>26</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="InputChannel" datasize="14" arraysize="120">
+        <collection name="GlobalPaste" datasize="1" arraysize="1">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="GlobalPasteBank" datasize="1" arraysize="8">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="DCATemplate" datasize="5" arraysize="1">
+            <parameter name="Assign" type="bit" arraysize="40">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="Mix" datasize="14" arraysize="48">
+        <collection name="GlobalPaste" datasize="1" arraysize="1">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="GlobalPasteBank" datasize="1" arraysize="8">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="DCATemplate" datasize="5" arraysize="1">
+            <parameter name="Assign" type="bit" arraysize="40">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="Matrix" datasize="14" arraysize="12">
+        <collection name="GlobalPaste" datasize="1" arraysize="1">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="GlobalPasteBank" datasize="1" arraysize="8">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="DCATemplate" datasize="5" arraysize="1">
+            <parameter name="Assign" type="bit" arraysize="40">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="Stereo" datasize="14" arraysize="4">
+        <collection name="GlobalPaste" datasize="1" arraysize="1">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="GlobalPasteBank" datasize="1" arraysize="8">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="DCATemplate" datasize="5" arraysize="1">
+            <parameter name="Assign" type="bit" arraysize="40">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="DCA" datasize="9" arraysize="24">
+        <collection name="GlobalPaste" datasize="1" arraysize="1">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="GlobalPasteBank" datasize="1" arraysize="8">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="ChannelLink" datasize="9" arraysize="1">
+        <collection name="GlobalPaste" datasize="1" arraysize="1">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="GlobalPasteBank" datasize="1" arraysize="8">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="Dynamics" datasize="10" arraysize="1">
+        <collection name="ExternalIn" datasize="9" arraysize="1">
+            <collection name="GlobalPaste" datasize="1" arraysize="1">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="GlobalPasteBank" datasize="1" arraysize="8">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="Graph" datasize="1" arraysize="1">
+            <collection name="History" datasize="1" arraysize="1">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="MixBusType" datasize="9" arraysize="24">
+        <collection name="GlobalPaste" datasize="1" arraysize="1">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="GlobalPasteBank" datasize="1" arraysize="8">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="RackAllocation" datasize="9" arraysize="1">
+        <collection name="GlobalPaste" datasize="1" arraysize="1">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="GlobalPasteBank" datasize="1" arraysize="8">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="GEQRack" datasize="18" arraysize="32">
+        <collection name="LR" datasize="9" arraysize="2">
+            <collection name="GlobalPaste" datasize="1" arraysize="1">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="GlobalPasteBank" datasize="1" arraysize="8">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="EffectRack" datasize="144" arraysize="1">
+        <collection name="PlugIn" datasize="9" arraysize="16">
+            <collection name="GlobalPaste" datasize="1" arraysize="1">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="GlobalPasteBank" datasize="1" arraysize="8">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="PremiumRack" datasize="288" arraysize="4">
+        <collection name="PlugIn" datasize="18" arraysize="16">
+            <collection name="LR" datasize="9" arraysize="2">
+                <collection name="GlobalPaste" datasize="1" arraysize="1">
+                    <parameter name="On" type="bit" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>31</kind>
+                    </parameter>
+                </collection>
+                <collection name="GlobalPasteBank" datasize="1" arraysize="8">
+                    <parameter name="On" type="bit" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>31</kind>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="Automixer" datasize="9" arraysize="1">
+        <collection name="GlobalPaste" datasize="1" arraysize="1">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="GlobalPasteBank" datasize="1" arraysize="8">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="CustomFaderBank" datasize="9" arraysize="1">
+        <collection name="GlobalPaste" datasize="1" arraysize="1">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="GlobalPasteBank" datasize="1" arraysize="8">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="SubIn" datasize="9" arraysize="1">
+        <collection name="GlobalPaste" datasize="1" arraysize="1">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="GlobalPasteBank" datasize="1" arraysize="8">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="PortToPort" datasize="9" arraysize="1">
+        <collection name="GlobalPaste" datasize="1" arraysize="1">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="GlobalPasteBank" datasize="1" arraysize="8">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="PortToPortHA" datasize="9" arraysize="1">
+        <collection name="GlobalPaste" datasize="1" arraysize="1">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="GlobalPasteBank" datasize="1" arraysize="8">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="Console" datasize="1" arraysize="1">
+        <collection name="GlobalPaste" datasize="1" arraysize="1">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>1</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="Focus" datasize="9" arraysize="1">
+        <collection name="GlobalPaste" datasize="1" arraysize="1">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="GlobalPasteBank" datasize="1" arraysize="8">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="DCAAssignment" datasize="1" arraysize="24">
+        <collection name="GlobalPaste" datasize="1" arraysize="1">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="UserSetting" datasize="490" arraysize="1">
+        <collection name="GlobalPaste" datasize="1" arraysize="2">
+            <parameter name="BankSelect" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>8</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="GlobalPasteBank" datasize="13" arraysize="8">
+            <parameter name="Stored" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Name" type="string" arraysize="1">
+                <maximum>12</maximum>
+                <default></default>
+            </parameter>
+        </collection>
+        <collection name="GlobalPasteGroup" datasize="12" arraysize="32">
+            <collection name="Scene" datasize="12" arraysize="1">
+                <parameter name="Name" type="string" arraysize="1">
+                    <maximum>12</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="GlobalPasteBank" datasize="8583" arraysize="8">
+        <collection name="InputChannel" datasize="65" arraysize="120">
+            <parameter name="All" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ChannelPatch" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ChannelName" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Phase" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ChannelGain" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Filters" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="EQ" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="EQTheatreSelect" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Proc" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Dynamics" type="bit" arraysize="2">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="DynamicsTheatreSelect" type="bit" arraysize="2">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Delay" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="DirectOutPatch" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="DirectOutOn" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Insert" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="DCAAssignment" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="MuteAssignment" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ChannelOn" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Fader" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="PanRouting" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <collection name="HeadAmp" datasize="1" arraysize="1">
+                <parameter name="Gain" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="Phase" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="MSDecode" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="ToMix" datasize="1" arraysize="48">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="ToMatrix" datasize="1" arraysize="12">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="ToSurround" datasize="1" arraysize="1">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="Mix" datasize="14" arraysize="48">
+            <parameter name="All" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ChannelPatch" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ChannelName" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Filters" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="EQ" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="EQTheatreSelect" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Proc" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Dynamics" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="DynamicsTheatreSelect" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Delay" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Insert" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="DCAAssignment" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="MuteAssignment" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ChannelOn" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Fader" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="PanRouting" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <collection name="ToMatrix" datasize="1" arraysize="12">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="Matrix" datasize="2" arraysize="12">
+            <parameter name="All" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ChannelPatch" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ChannelName" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Filters" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="EQ" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="EQTheatreSelect" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Proc" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Dynamics" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="DynamicsTheatreSelect" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Delay" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Insert" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="DCAAssignment" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="MuteAssignment" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ChannelOn" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Fader" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="PanRouting" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="Stereo" datasize="14" arraysize="4">
+            <parameter name="All" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ChannelPatch" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ChannelName" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Filters" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="EQ" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="EQTheatreSelect" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Proc" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Dynamics" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="DynamicsTheatreSelect" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Delay" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Insert" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="DCAAssignment" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="MuteAssignment" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ChannelOn" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Fader" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="PanRouting" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <collection name="ToMatrix" datasize="1" arraysize="12">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="DCA" datasize="1" arraysize="24">
+            <parameter name="ChannelName" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ChannelOn" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Fader" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="Console" datasize="2" arraysize="1">
+            <collection name="Course" datasize="1" arraysize="2">
+                <collection name="FaderBank" datasize="1" arraysize="1">
+                    <parameter name="SelectedBank" type="bit" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>31</kind>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+        <collection name="TapTempo" datasize="1" arraysize="5">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+</collections>
+</function>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<function name="SceneInfo" collections="13" parameters="24" datasize="342" stringsize="11">
+<collections>
+    <collection name="Info" datasize="297" arraysize="1">
+        <parameter name="ProductName" type="string" arraysize="1">
+            <maximum>32</maximum>
+            <default>DM3</default>
+        </parameter>
+        <parameter name="ProductSubName" type="string" arraysize="1">
+            <maximum>32</maximum>
+        </parameter>
+        <parameter name="DataType" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <parameter name="Protect" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+            <kind>31</kind>
+        </parameter>
+        <parameter name="Title" type="string" arraysize="1">
+            <maximum>64</maximum>
+        </parameter>
+        <parameter name="Comment" type="string" arraysize="1">
+            <maximum>128</maximum>
+        </parameter>
+        <parameter name="OwnerName" type="string" arraysize="1">
+            <maximum>32</maximum>
+        </parameter>
+        <collection name="TimeStamp" datasize="7" arraysize="1">
+            <parameter name="Year" type="uint16_t" arraysize="1">
+                <minimum>2000</minimum>
+                <maximum>9999</maximum>
+            </parameter>
+            <parameter name="Month" type="uint8_t" arraysize="1">
+                <minimum>1</minimum>
+                <maximum>12</maximum>
+            </parameter>
+            <parameter name="Day" type="uint8_t" arraysize="1">
+                <minimum>1</minimum>
+                <maximum>31</maximum>
+            </parameter>
+            <parameter name="Hour" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>23</maximum>
+            </parameter>
+            <parameter name="Minute" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>59</maximum>
+            </parameter>
+            <parameter name="Second" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>61</maximum>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="Focus" datasize="8" arraysize="1">
+        <parameter name="DataFormat" type="string" arraysize="1">
+            <maximum>4</maximum>
+            <default>TF</default>
+        </parameter>
+        <collection name="TF" datasize="4" arraysize="1">
+            <parameter name="Target" type="uint32_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0xFFFFFFFFUL</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="Fading" datasize="37" arraysize="1">
+        <parameter name="FadeTime" type="uint16_t" arraysize="1">
+            <minimum>10</minimum>
+            <maximum>600</maximum>
+            <default>10</default>
+            <step>1</step>
+            <unit>sec</unit>
+            <scaling>10</scaling>
+        </parameter>
+        <parameter name="On" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+            <kind>31</kind>
+        </parameter>
+        <collection name="InputChannel" datasize="1" arraysize="16">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="StInChannel" datasize="1" arraysize="2">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="FxRtnChannel" datasize="1" arraysize="4">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="Mix" datasize="1" arraysize="6">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="Matrix" datasize="1" arraysize="2">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="FxBus" datasize="1" arraysize="2">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="Stereo" datasize="1" arraysize="2">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+</collections>
+</function>

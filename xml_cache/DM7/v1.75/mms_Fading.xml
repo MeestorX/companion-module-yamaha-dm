@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<function name="Fading" collections="7" parameters="28" datasize="2232" stringsize="70" version="01.00.00 A">
+<collections>
+    <collection name="Fading" datasize="2232" arraysize="1">
+        <collection name="InputChannel" datasize="12" arraysize="120">
+            <parameter name="Time" type="uint16_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>600</maximum>
+                <default>0</default>
+                <step>1</step>
+                <unit>sec</unit>
+                <scaling>10</scaling>
+            </parameter>
+            <parameter name="OffsetTime" type="uint16_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>600</maximum>
+                <default>0</default>
+                <step>1</step>
+                <unit>sec</unit>
+                <scaling>10</scaling>
+            </parameter>
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Target" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>-32768</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <scaling>100</scaling>
+                <kind>27</kind>
+            </parameter>
+            <parameter name="Level" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>-32768</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <scaling>100</scaling>
+                <kind>27</kind>
+            </parameter>
+            <parameter name="PanOn" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="PanTarget" type="int8_t" arraysize="1">
+                <minimum>-63</minimum>
+                <maximum>63</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>32</kind>
+            </parameter>
+            <parameter name="Pan" type="int8_t" arraysize="1">
+                <minimum>-63</minimum>
+                <maximum>63</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>32</kind>
+            </parameter>
+        </collection>
+        <collection name="Mix" datasize="9" arraysize="48">
+            <parameter name="Time" type="uint16_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>600</maximum>
+                <default>0</default>
+                <step>1</step>
+                <unit>sec</unit>
+                <scaling>10</scaling>
+            </parameter>
+            <parameter name="OffsetTime" type="uint16_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>600</maximum>
+                <default>0</default>
+                <step>1</step>
+                <unit>sec</unit>
+                <scaling>10</scaling>
+            </parameter>
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Target" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>-32768</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <scaling>100</scaling>
+                <kind>27</kind>
+            </parameter>
+            <parameter name="Level" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>-32768</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <scaling>100</scaling>
+                <kind>27</kind>
+            </parameter>
+        </collection>
+        <collection name="Matrix" datasize="9" arraysize="12">
+            <parameter name="Time" type="uint16_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>600</maximum>
+                <default>0</default>
+                <step>1</step>
+                <unit>sec</unit>
+                <scaling>10</scaling>
+            </parameter>
+            <parameter name="OffsetTime" type="uint16_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>600</maximum>
+                <default>0</default>
+                <step>1</step>
+                <unit>sec</unit>
+                <scaling>10</scaling>
+            </parameter>
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Target" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>-32768</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <scaling>100</scaling>
+                <kind>27</kind>
+            </parameter>
+            <parameter name="Level" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>-32768</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <scaling>100</scaling>
+                <kind>27</kind>
+            </parameter>
+        </collection>
+        <collection name="Stereo" datasize="9" arraysize="4">
+            <parameter name="Time" type="uint16_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>600</maximum>
+                <default>0</default>
+                <step>1</step>
+                <unit>sec</unit>
+                <scaling>10</scaling>
+            </parameter>
+            <parameter name="OffsetTime" type="uint16_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>600</maximum>
+                <default>0</default>
+                <step>1</step>
+                <unit>sec</unit>
+                <scaling>10</scaling>
+            </parameter>
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Target" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>-32768</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <scaling>100</scaling>
+                <kind>27</kind>
+            </parameter>
+            <parameter name="Level" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>-32768</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <scaling>100</scaling>
+                <kind>27</kind>
+            </parameter>
+        </collection>
+        <collection name="DCA" datasize="9" arraysize="24">
+            <parameter name="Time" type="uint16_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>600</maximum>
+                <default>0</default>
+                <step>1</step>
+                <unit>sec</unit>
+                <scaling>10</scaling>
+            </parameter>
+            <parameter name="OffsetTime" type="uint16_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>600</maximum>
+                <default>0</default>
+                <step>1</step>
+                <unit>sec</unit>
+                <scaling>10</scaling>
+            </parameter>
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Target" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>-32768</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <scaling>100</scaling>
+                <kind>27</kind>
+            </parameter>
+            <parameter name="Level" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>-32768</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <scaling>100</scaling>
+                <kind>27</kind>
+            </parameter>
+        </collection>
+    </collection>
+</collections>
+</function>

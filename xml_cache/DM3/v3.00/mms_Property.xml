@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<function name="Property" collections="17" parameters="27" datasize="396" stringsize="9">
+<collections>
+    <collection name="Specification" datasize="208" arraysize="1">
+        <collection name="Unit" datasize="144" arraysize="1">
+            <parameter name="ProductName" type="string" arraysize="1">
+                <maximum>16</maximum>
+                <default></default>
+            </parameter>
+            <parameter name="ManufacturerName" type="string" arraysize="1">
+                <maximum>32</maximum>
+                <default></default>
+            </parameter>
+            <parameter name="FirmwareVersion" type="string" arraysize="1">
+                <maximum>32</maximum>
+                <default></default>
+            </parameter>
+            <parameter name="ProtocolVersion" type="string" arraysize="1">
+                <maximum>32</maximum>
+                <default></default>
+            </parameter>
+            <parameter name="SerialNumber" type="string" arraysize="1">
+                <maximum>32</maximum>
+                <default></default>
+            </parameter>
+        </collection>
+        <collection name="Slot" datasize="48" arraysize="1">
+            <collection name="BuiltIn" datasize="12" arraysize="1">
+                <parameter name="SlotNum" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0</maximum>
+                    <default>0</default>
+                    <step>0</step>
+                </parameter>
+                <parameter name="InputNum" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0</maximum>
+                    <default>0</default>
+                    <step>0</step>
+                </parameter>
+                <parameter name="OutputNum" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0</maximum>
+                    <default>0</default>
+                    <step>0</step>
+                </parameter>
+            </collection>
+            <collection name="MY" datasize="12" arraysize="1">
+                <parameter name="SlotNum" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0</maximum>
+                    <default>0</default>
+                    <step>0</step>
+                </parameter>
+                <parameter name="InputNum" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0</maximum>
+                    <default>0</default>
+                    <step>0</step>
+                </parameter>
+                <parameter name="OutputNum" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0</maximum>
+                    <default>0</default>
+                    <step>0</step>
+                </parameter>
+            </collection>
+            <collection name="HC" datasize="12" arraysize="1">
+                <parameter name="SlotNum" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0</maximum>
+                    <default>0</default>
+                    <step>0</step>
+                </parameter>
+                <parameter name="InputNum" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0</maximum>
+                    <default>0</default>
+                    <step>0</step>
+                </parameter>
+                <parameter name="OutputNum" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0</maximum>
+                    <default>0</default>
+                    <step>0</step>
+                </parameter>
+            </collection>
+            <collection name="NY" datasize="12" arraysize="1">
+                <parameter name="SlotNum" type="uint32_t" arraysize="1">
+                    <minimum>1</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>0</step>
+                </parameter>
+                <parameter name="InputNum" type="uint32_t" arraysize="1">
+                    <minimum>64</minimum>
+                    <maximum>64</maximum>
+                    <default>64</default>
+                    <step>0</step>
+                </parameter>
+                <parameter name="OutputNum" type="uint32_t" arraysize="1">
+                    <minimum>64</minimum>
+                    <maximum>64</maximum>
+                    <default>64</default>
+                    <step>0</step>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="Control" datasize="16" arraysize="1">
+            <collection name="Port" datasize="16" arraysize="1">
+                <parameter name="GPIn" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0</maximum>
+                    <default>0</default>
+                    <step>0</step>
+                </parameter>
+                <parameter name="GPOut" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0</maximum>
+                    <default>0</default>
+                    <step>0</step>
+                </parameter>
+                <parameter name="MIDIIn" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0</maximum>
+                    <default>0</default>
+                    <step>0</step>
+                </parameter>
+                <parameter name="MIDIOut" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0</maximum>
+                    <default>0</default>
+                    <step>0</step>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="Configuration" datasize="65" arraysize="1">
+        <collection name="Slot" datasize="65" arraysize="1">
+            <collection name="NY" datasize="65" arraysize="1">
+                <parameter name="CardType" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>2</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+                <parameter name="CardManufacturer" type="string" arraysize="1">
+                    <maximum>32</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="CardName" type="string" arraysize="1">
+                    <maximum>32</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="Status" datasize="99" arraysize="1">
+        <collection name="CommSession" datasize="33" arraysize="3">
+            <parameter name="ClientType" type="string" arraysize="1">
+                <maximum>32</maximum>
+                <default></default>
+            </parameter>
+            <parameter name="SyncDirection" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>2</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="UserAccount" datasize="24" arraysize="1">
+        <collection name="Unit" datasize="24" arraysize="1">
+            <parameter name="Password" type="string" arraysize="1">
+                <maximum>24</maximum>
+                <default></default>
+            </parameter>
+        </collection>
+    </collection>
+</collections>
+</function>

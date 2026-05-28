@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<function name="PresetInfo" collections="5" parameters="15" datasize="395" stringsize="9">
+<collections>
+    <collection name="Info" datasize="391" arraysize="1">
+        <parameter name="ProductName" type="string" arraysize="1">
+            <maximum>32</maximum>
+            <default></default>
+        </parameter>
+        <parameter name="ProductSubName" type="string" arraysize="1">
+            <maximum>32</maximum>
+            <default></default>
+        </parameter>
+        <parameter name="IncludedChNum" type="uint8_t" arraysize="1">
+            <minimum>1</minimum>
+            <maximum>8</maximum>
+            <default>1</default>
+        </parameter>
+        <parameter name="ChType" type="string" arraysize="8">
+            <maximum>4</maximum>
+            <default></default>
+        </parameter>
+        <parameter name="Ch" type="uint8_t" arraysize="8">
+            <minimum>0</minimum>
+            <maximum>255</maximum>
+            <default>0</default>
+        </parameter>
+        <parameter name="Protect" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+            <kind>31</kind>
+        </parameter>
+        <parameter name="Title" type="string" arraysize="1">
+            <maximum>64</maximum>
+            <default></default>
+        </parameter>
+        <parameter name="Category1" type="string" arraysize="1">
+            <maximum>12</maximum>
+            <default></default>
+        </parameter>
+        <parameter name="Category2" type="string" arraysize="1">
+            <maximum>128</maximum>
+            <default></default>
+        </parameter>
+        <parameter name="PresetType" type="string" arraysize="1">
+            <maximum>32</maximum>
+            <default></default>
+        </parameter>
+        <parameter name="PresetOption" type="string" arraysize="1">
+            <maximum>8</maximum>
+            <default></default>
+        </parameter>
+        <parameter name="GroupName" type="string" arraysize="1">
+            <maximum>32</maximum>
+            <default></default>
+        </parameter>
+        <parameter name="BlockNum" type="uint8_t" arraysize="8">
+            <minimum>0</minimum>
+            <maximum>255</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <collection name="ActorMode" datasize="1" arraysize="1">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="Focus" datasize="4" arraysize="1">
+        <collection name="DM7" datasize="4" arraysize="1">
+            <parameter name="Target" type="uint32_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0xFFFFFFFFUL</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+    </collection>
+</collections>
+</function>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<function name="PremiumRack" collections="5" parameters="7" datasize="36416" stringsize="2" version="01.00.00 A">
+<collections>
+    <collection name="PremiumRack2" datasize="9104" arraysize="4">
+        <collection name="PlugIn" datasize="569" arraysize="16">
+            <parameter name="PluginName" type="string" arraysize="1">
+                <maximum>17</maximum>
+                <default></default>
+            </parameter>
+            <parameter name="SlotSize" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>16</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="ItemNum" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>2</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <collection name="LR" datasize="275" arraysize="2">
+                <parameter name="LibraryName" type="string" arraysize="1">
+                    <maximum>17</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="Bypass" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="TempoAssign" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>5</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+                <collection name="Parameter" datasize="4" arraysize="64">
+                    <parameter name="Value" type="int32_t" arraysize="1">
+                        <minimum>-2147483648</minimum>
+                        <maximum>2147483647</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+    </collection>
+</collections>
+</function>

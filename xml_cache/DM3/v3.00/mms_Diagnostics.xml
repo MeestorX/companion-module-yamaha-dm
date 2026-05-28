@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<function name="Diagnostics" collections="10" parameters="12" datasize="279" stringsize="3">
+<collections>
+    <collection name="Control" datasize="23" arraysize="1">
+        <parameter name="Transport" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+        </parameter>
+        <parameter name="CurrentCategory" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>15</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <parameter name="CurrentCommand" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>102</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <parameter name="TargetCategory" type="uint8_t" arraysize="16">
+            <minimum>0</minimum>
+            <maximum>2</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <collection name="LED" datasize="3" arraysize="1">
+            <parameter name="Speed" type="int8_t" arraysize="1">
+                <minimum>-5</minimum>
+                <maximum>5</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="Progress" type="uint16_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>365</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="LCD" datasize="1" arraysize="1">
+            <parameter name="Speed" type="int8_t" arraysize="1">
+                <minimum>-5</minimum>
+                <maximum>5</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="Command" datasize="2" arraysize="103">
+        <parameter name="Result" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>2</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <parameter name="Target" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+    </collection>
+    <collection name="BuiltIn" datasize="48" arraysize="1">
+        <collection name="InputPort" datasize="3" arraysize="16">
+            <collection name="HeadAmp" datasize="3" arraysize="1">
+                <parameter name="48V" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="Gain" type="int16_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>6400</maximum>
+                    <default>0</default>
+                    <step>100</step>
+                    <unit>dB</unit>
+                    <nominal>0</nominal>
+                    <scaling>100</scaling>
+                    <kind>2</kind>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="Dante" datasize="2" arraysize="1">
+        <collection name="PIN" datasize="1" arraysize="2">
+            <parameter name="Mute" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>2</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+    </collection>
+</collections>
+</function>

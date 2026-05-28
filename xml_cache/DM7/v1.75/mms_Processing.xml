@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<function name="Processing" collections="23" parameters="14" datasize="1324" stringsize="9" version="01.00.00 A">
+<collections>
+    <collection name="Omni" datasize="336" arraysize="1">
+        <collection name="InputPort" datasize="7" arraysize="32">
+            <parameter name="Phase" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <collection name="HeadAmp" datasize="6" arraysize="1">
+                <parameter name="48V" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="Gain" type="int16_t" arraysize="1">
+                    <minimum>-600</minimum>
+                    <maximum>6600</maximum>
+                    <default>-600</default>
+                    <step>100</step>
+                    <unit>dB</unit>
+                    <scaling>100</scaling>
+                    <kind>2</kind>
+                </parameter>
+                <parameter name="CompensationOn" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>66</kind>
+                </parameter>
+                <parameter name="CompensationGain" type="int16_t" arraysize="1">
+                    <minimum>-600</minimum>
+                    <maximum>6600</maximum>
+                    <default>-600</default>
+                    <step>100</step>
+                    <unit>dB</unit>
+                    <scaling>100</scaling>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="MSDecode" datasize="3" arraysize="16">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="SideGain" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>0</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <scaling>100</scaling>
+                <kind>30</kind>
+            </parameter>
+        </collection>
+        <collection name="OutputPort" datasize="4" arraysize="16">
+            <collection name="Patch" datasize="4" arraysize="1">
+                <parameter name="Source" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="AES" datasize="20" arraysize="1">
+        <collection name="InputPort" datasize="1" arraysize="4">
+            <parameter name="Phase" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="OutputPort" datasize="4" arraysize="4">
+            <collection name="Patch" datasize="4" arraysize="1">
+                <parameter name="Source" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="PY" datasize="256" arraysize="1">
+        <collection name="OutputPort" datasize="4" arraysize="64">
+            <collection name="Patch" datasize="4" arraysize="1">
+                <parameter name="Source" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="USB" datasize="128" arraysize="1">
+        <collection name="OutputPort" datasize="4" arraysize="32">
+            <collection name="Patch" datasize="4" arraysize="1">
+                <parameter name="Source" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="Dante" datasize="576" arraysize="1">
+        <collection name="OutputPort" datasize="4" arraysize="144">
+            <collection name="Patch" datasize="4" arraysize="1">
+                <parameter name="Source" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="Recorder" datasize="8" arraysize="1">
+        <collection name="OutputPort" datasize="4" arraysize="2">
+            <collection name="Patch" datasize="4" arraysize="1">
+                <parameter name="Source" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+</collections>
+</function>

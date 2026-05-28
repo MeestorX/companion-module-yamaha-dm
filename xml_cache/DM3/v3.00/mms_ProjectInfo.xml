@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<function name="ProjectInfo" collections="3" parameters="10" datasize="231" stringsize="4">
+<collections>
+    <collection name="Info" datasize="231" arraysize="1">
+        <parameter name="ProductName" type="string" arraysize="1">
+            <maximum>32</maximum>
+            <default>DM3</default>
+        </parameter>
+        <parameter name="ProductSubName" type="string" arraysize="1">
+            <maximum>32</maximum>
+        </parameter>
+        <parameter name="Comment" type="string" arraysize="1">
+            <maximum>128</maximum>
+        </parameter>
+        <parameter name="OwnerName" type="string" arraysize="1">
+            <maximum>32</maximum>
+        </parameter>
+        <collection name="TimeStamp" datasize="7" arraysize="1">
+            <parameter name="Year" type="uint16_t" arraysize="1">
+                <minimum>2000</minimum>
+                <maximum>9999</maximum>
+            </parameter>
+            <parameter name="Month" type="uint8_t" arraysize="1">
+                <minimum>1</minimum>
+                <maximum>12</maximum>
+            </parameter>
+            <parameter name="Day" type="uint8_t" arraysize="1">
+                <minimum>1</minimum>
+                <maximum>31</maximum>
+            </parameter>
+            <parameter name="Hour" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>23</maximum>
+            </parameter>
+            <parameter name="Minute" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>59</maximum>
+            </parameter>
+            <parameter name="Second" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>61</maximum>
+            </parameter>
+        </collection>
+    </collection>
+</collections>
+</function>

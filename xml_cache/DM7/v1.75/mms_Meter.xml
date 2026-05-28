@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<function name="Meter" collections="20" parameters="93" datasize="2376" stringsize="455">
+<collections>
+    <collection name="InputChannel" datasize="30" arraysize="40">
+        <parameter name="PreDG" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PreHPF" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PreEQ" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="EQOut" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PreGate" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="GateGR" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>0</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="GateKeyIn" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="GateOut" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PreComp" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="CompGR" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>0</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="CompKeyIn" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="CompOut" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PreFader" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PostFader" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PostOn" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+    </collection>
+    <collection name="StInChannel" datasize="22" arraysize="4">
+        <parameter name="PreEQ" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="EQOut" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PreLeveler" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="LevelerGR" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>0</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="LevelerOut" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PreDucker" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="DuckerGR" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>0</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="DuckerOut" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PreFader" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PostFader" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PostOn" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+    </collection>
+    <collection name="FxRtnChannel" datasize="10" arraysize="4">
+        <parameter name="PreEQ" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="EQOut" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PreFader" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PostFader" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PostOn" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+    </collection>
+    <collection name="Group" datasize="20" arraysize="16">
+        <parameter name="PreHPF" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PreEQ" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="EQOut" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PreComp" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="CompGR" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>0</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="CompKeyIn" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="CompOut" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PreFader" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PostFader" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PostOn" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+    </collection>
+    <collection name="Mix" datasize="22" arraysize="8">
+        <parameter name="PreHPF" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PreEQ" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="EQOut" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="FBSOut" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PreComp" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="CompGR" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>0</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="CompKeyIn" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="CompOut" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PreFader" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PostFader" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PostOn" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+    </collection>
+    <collection name="StMix" datasize="20" arraysize="12">
+        <parameter name="PreHPF" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PreEQ" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="EQOut" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PreComp" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="CompGR" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>0</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="CompKeyIn" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="CompOut" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PreFader" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PostFader" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PostOn" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+    </collection>
+    <collection name="Stereo" datasize="22" arraysize="2">
+        <parameter name="PreHPF" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PreEQ" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="EQOut" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="FBSOut" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PreComp" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="CompGR" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="CompKeyIn" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="CompOut" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PreFader" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PostFader" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PostOn" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+    </collection>
+    <collection name="Mono" datasize="22" arraysize="1">
+        <parameter name="PreHPF" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PreEQ" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="EQOut" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="FBSOut" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PreComp" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="CompGR" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="CompKeyIn" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="CompOut" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PreFader" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PostFader" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+        <parameter name="PostOn" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+    </collection>
+    <collection name="FX" datasize="24" arraysize="2">
+        <collection name="Meter" datasize="4" arraysize="4">
+            <parameter name="RawValue" type="uint32_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0xFFFFFFFFUL</maximum>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="Input" datasize="2" arraysize="2">
+            <parameter name="Level" type="int16_t" arraysize="1">
+                <minimum>-12000</minimum>
+                <maximum>1</maximum>
+                <step>1</step>
+                <unit>dBFS</unit>
+                <scaling>100</scaling>
+            </parameter>
+        </collection>
+        <collection name="Output" datasize="2" arraysize="2">
+            <parameter name="Level" type="int16_t" arraysize="1">
+                <minimum>-12000</minimum>
+                <maximum>1</maximum>
+                <step>1</step>
+                <unit>dBFS</unit>
+                <scaling>100</scaling>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="InsFX" datasize="24" arraysize="8">
+        <collection name="Meter" datasize="4" arraysize="4">
+            <parameter name="RawValue" type="uint32_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0xFFFFFFFFUL</maximum>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="Input" datasize="2" arraysize="2">
+            <parameter name="Level" type="int16_t" arraysize="1">
+                <minimum>-12000</minimum>
+                <maximum>1</maximum>
+                <step>1</step>
+                <unit>dBFS</unit>
+                <scaling>100</scaling>
+            </parameter>
+        </collection>
+        <collection name="Output" datasize="2" arraysize="2">
+            <parameter name="Level" type="int16_t" arraysize="1">
+                <minimum>-12000</minimum>
+                <maximum>1</maximum>
+                <step>1</step>
+                <unit>dBFS</unit>
+                <scaling>100</scaling>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="Cue" datasize="2" arraysize="1">
+        <parameter name="Level" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+    </collection>
+    <collection name="Monitor" datasize="2" arraysize="1">
+        <parameter name="Level" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+    </collection>
+    <collection name="Oscillator" datasize="2" arraysize="1">
+        <parameter name="Level" type="int16_t" arraysize="1">
+            <minimum>-12000</minimum>
+            <maximum>1</maximum>
+            <step>1</step>
+            <unit>dBFS</unit>
+            <scaling>100</scaling>
+        </parameter>
+    </collection>
+</collections>
+</function>

@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<function name="StaticSetup" collections="47" parameters="81" datasize="3057" stringsize="54">
+<collections>
+    <collection name="Brightness" datasize="21" arraysize="1">
+        <parameter name="Select" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <collection name="Bank" datasize="10" arraysize="2">
+            <parameter name="PowerSavingSecond" type="uint16_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0xFFFF</maximum>
+                <default>0xFFFF</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="ScreenBrightness" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>20</maximum>
+                <default>15</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="StripLightBrightness" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>20</maximum>
+                <default>15</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="MiniLCDBrightness" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>20</maximum>
+                <default>15</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="ColorBarBrightness" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>20</maximum>
+                <default>15</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="PanelBrightness" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>20</maximum>
+                <default>15</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="MiniLCDContrast" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>20</maximum>
+                <default>10</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="ScreenAppearance" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="StripLightRatio" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>20</maximum>
+                <default>10</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="Fan" datasize="16" arraysize="1">
+        <parameter name="Speed" type="string" arraysize="1">
+            <maximum>16</maximum>
+            <default>LOW</default>
+        </parameter>
+    </collection>
+    <collection name="Preference" datasize="32" arraysize="1">
+        <collection name="Name" datasize="32" arraysize="1">
+            <parameter name="Language" type="string" arraysize="1">
+                <maximum>32</maximum>
+                <default>English</default>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="DateTime" datasize="67" arraysize="1">
+        <parameter name="CityName" type="string" arraysize="1">
+            <maximum>64</maximum>
+            <default>Tokyo</default>
+        </parameter>
+        <parameter name="SummerTime" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <parameter name="DateFormat" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>2</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <parameter name="TimeFormat" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+    </collection>
+    <collection name="Network" datasize="32" arraysize="1">
+        <parameter name="DeviceName" type="string" arraysize="1">
+            <maximum>32</maximum>
+            <default>Yamaha DM7</default>
+        </parameter>
+    </collection>
+    <collection name="Recorder" datasize="2" arraysize="1">
+        <collection name="PlayList" datasize="2" arraysize="1">
+            <parameter name="DispMode" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="SelectedPort" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="SaveLoad" datasize="1" arraysize="1">
+        <parameter name="SelectedPort" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>2</maximum>
+            <default>2</default>
+            <step>1</step>
+        </parameter>
+    </collection>
+    <collection name="Editor" datasize="273" arraysize="1">
+        <collection name="WindowSetup" datasize="6" arraysize="1">
+            <parameter name="MainAreaSize" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="Maximize" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="Width" type="uint16_t" arraysize="1">
+                <minimum>1200</minimum>
+                <maximum>65535</maximum>
+                <default>1200</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="Height" type="uint16_t" arraysize="1">
+                <minimum>700</minimum>
+                <maximum>65535</maximum>
+                <default>700</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="Layout" datasize="1" arraysize="1">
+            <collection name="LevelMeter" datasize="1" arraysize="1">
+                <parameter name="Visible" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="LevelMeter" datasize="1" arraysize="1">
+            <collection name="Unicast" datasize="1" arraysize="1">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="Synchronize" datasize="265" arraysize="1">
+            <parameter name="EthernetAdapter" type="string" arraysize="1">
+                <maximum>256</maximum>
+                <default></default>
+            </parameter>
+            <parameter name="LastDeviceMAC" type="uint8_t" arraysize="6">
+                <minimum>0</minimum>
+                <maximum>255</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="Direction" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <collection name="SyncSelectedCH" datasize="2" arraysize="1">
+                <parameter name="ConsoleToEditor" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+                <parameter name="EditorToConsole" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="Ctrl" datasize="8" arraysize="1">
+        <collection name="Synchronize" datasize="8" arraysize="1">
+            <collection name="Last" datasize="4" arraysize="1">
+                <parameter name="IPv4Address" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+            <collection name="DirectIP" datasize="4" arraysize="1">
+                <parameter name="IPv4Address" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="Unit" datasize="32" arraysize="1">
+        <parameter name="LastVersion" type="string" arraysize="1">
+            <maximum>32</maximum>
+            <default></default>
+        </parameter>
+    </collection>
+    <collection name="R2dStatus" datasize="256" arraysize="1">
+        <collection name="Course" datasize="128" arraysize="2">
+            <collection name="Fader" datasize="4" arraysize="16">
+                <parameter name="Odometer" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+            <collection name="Motor" datasize="4" arraysize="16">
+                <parameter name="Odometer" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="UserAccount" datasize="1858" arraysize="1">
+        <parameter name="CurrentUser" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>12</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <parameter name="EditFlag" type="bit" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+            <kind>31</kind>
+        </parameter>
+        <parameter name="DataFormat" type="string" arraysize="1">
+            <maximum>4</maximum>
+            <default>DM7</default>
+        </parameter>
+        <collection name="Account" datasize="73" arraysize="2">
+            <parameter name="UserName" type="string" arraysize="1">
+                <maximum>16</maximum>
+                <default>Administrator</default>
+            </parameter>
+            <parameter name="Comment" type="string" arraysize="1">
+                <maximum>32</maximum>
+                <default></default>
+            </parameter>
+            <parameter name="Password" type="string" arraysize="1">
+                <maximum>24</maximum>
+                <default></default>
+            </parameter>
+            <parameter name="PowerUser" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="UserLevel" datasize="853" arraysize="2">
+            <collection name="InputChannel" datasize="4" arraysize="120">
+                <parameter name="Target" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0xFFFFFFFFUL</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+            <collection name="Mix" datasize="4" arraysize="48">
+                <parameter name="Target" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0xFFFFFFFFUL</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+            <collection name="Matrix" datasize="4" arraysize="12">
+                <parameter name="Target" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0xFFFFFFFFUL</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+            <collection name="Stereo" datasize="4" arraysize="4">
+                <parameter name="Target" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0xFFFFFFFFUL</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+            <collection name="DCA" datasize="4" arraysize="24">
+                <parameter name="Target" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0xFFFFFFFFUL</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+            <collection name="CurrentScene" datasize="1" arraysize="1">
+                <parameter name="InputPatch" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="InputName" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="OutputPatch" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="OutputName" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="BusSetup" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="RackUserLevel" datasize="14" arraysize="1">
+                <parameter name="PremiumRack" type="bit" arraysize="64">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="EffectRack" type="bit" arraysize="16">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="GEQRack" type="bit" arraysize="32">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="General" datasize="1" arraysize="1">
+                <parameter name="MuteGroupAssign" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="MuteGroupMaster" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="Automixer" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="SceneList" datasize="1" arraysize="1">
+                <parameter name="Edit" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="Recall" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="LibraryList" datasize="1" arraysize="1">
+                <parameter name="Edit" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="Recall" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="MonitorSetup" datasize="1" arraysize="1">
+                <parameter name="Oscillator" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="Talkback" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="Solo" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="SystemSetup" datasize="1" arraysize="1">
+                <parameter name="MixerSetup" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="OutputPort" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="MidiGpi" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="Dante" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="FileLoad" datasize="1" arraysize="1">
+                <parameter name="UserSetup" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="SystemMonitorSetup" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="CurrentScene" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="SceneList" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="LibraryList" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="DanteNetwork" datasize="459" arraysize="1">
+        <collection name="DDM" datasize="459" arraysize="1">
+            <collection name="DomainInfo" datasize="459" arraysize="1">
+                <parameter name="AddressType" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+                <parameter name="ServerName" type="string" arraysize="1">
+                    <maximum>99</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="IPv4Address" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+                <parameter name="LoginName" type="string" arraysize="1">
+                    <maximum>99</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="Password" type="string" arraysize="1">
+                    <maximum>255</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="KeepMeLoggedIn" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+</collections>
+</function>

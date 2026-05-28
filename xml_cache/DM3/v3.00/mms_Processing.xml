@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<function name="Processing" collections="15" parameters="7" datasize="264" stringsize="6">
+<collections>
+    <collection name="BuiltIn" datasize="48" arraysize="1">
+        <collection name="InputPort" datasize="3" arraysize="16">
+            <collection name="HeadAmp" datasize="3" arraysize="1">
+                <parameter name="48V" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="Gain" type="int16_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>6400</maximum>
+                    <default>0</default>
+                    <step>100</step>
+                    <unit>dB</unit>
+                    <nominal>0</nominal>
+                    <scaling>100</scaling>
+                    <kind>2</kind>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="Omni" datasize="32" arraysize="1">
+        <collection name="OutputPort" datasize="4" arraysize="8">
+            <collection name="Patch" datasize="4" arraysize="1">
+                <parameter name="Source" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="USBToHost" datasize="72" arraysize="1">
+        <collection name="OutputPort" datasize="4" arraysize="18">
+            <collection name="Patch" datasize="4" arraysize="1">
+                <parameter name="Source" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="Dante" datasize="112" arraysize="1">
+        <collection name="InputPort" datasize="3" arraysize="16">
+            <collection name="HeadAmp" datasize="3" arraysize="1">
+                <parameter name="48V" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="Gain" type="int16_t" arraysize="1">
+                    <minimum>-600</minimum>
+                    <maximum>6600</maximum>
+                    <default>-600</default>
+                    <step>100</step>
+                    <unit>dB</unit>
+                    <nominal>0</nominal>
+                    <scaling>100</scaling>
+                    <kind>2</kind>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="OutputPort" datasize="4" arraysize="16">
+            <collection name="Patch" datasize="4" arraysize="1">
+                <parameter name="Source" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+</collections>
+</function>

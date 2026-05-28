@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<function name="ConsoleSetup" collections="31" parameters="40" datasize="2179" stringsize="8">
+<collections>
+    <collection name="Preference" datasize="14" arraysize="1">
+        <collection name="Confirmation" datasize="3" arraysize="1">
+            <parameter name="Store" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Recall" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Patch" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="AutoSelect" datasize="4" arraysize="1">
+            <parameter name="Input" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Output" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Cue" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="SelCueLink" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="FaderBank" datasize="1" arraysize="1">
+            <parameter name="MemorizeSel" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="TapBlink" datasize="1" arraysize="1">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="Delay" datasize="2" arraysize="1">
+            <parameter name="Scale" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>4</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="Frame" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>5</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="RTA" datasize="1" arraysize="1">
+            <parameter name="Offset" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>30</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="PanelAssistance" datasize="1" arraysize="1">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="USB" datasize="1" arraysize="1">
+            <parameter name="DriverMode" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="UserDefinedKeys" datasize="1921" arraysize="1">
+        <parameter name="BankSelect" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <collection name="Bank" datasize="1920" arraysize="1">
+            <collection name="Key" datasize="320" arraysize="6">
+                <parameter name="Function" type="string" arraysize="1">
+                    <maximum>16</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="Parameter1" type="string" arraysize="1">
+                    <maximum>16</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="Parameter2" type="string" arraysize="1">
+                    <maximum>16</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="Option" type="string" arraysize="1">
+                    <maximum>256</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="FileName" type="string" arraysize="1">
+                    <maximum>12</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="FileHash" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="Scene" datasize="8" arraysize="1">
+        <parameter name="SelectedScene" type="string" arraysize="1">
+            <maximum>8</maximum>
+        </parameter>
+    </collection>
+    <collection name="Library" datasize="40" arraysize="1">
+        <parameter name="LastFileName" type="string" arraysize="1">
+            <maximum>40</maximum>
+        </parameter>
+    </collection>
+    <collection name="Common" datasize="15" arraysize="1">
+        <parameter name="SelectedCH" type="uint32_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>0xFFFFFFFFUL</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <collection name="SendsOnFader" datasize="1" arraysize="1">
+            <parameter name="TargetBus" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>20</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="GEQOnFader" datasize="9" arraysize="1">
+            <parameter name="On" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <collection name="Mix" datasize="1" arraysize="6">
+                <parameter name="StartBand" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>30</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+            <collection name="Stereo" datasize="1" arraysize="2">
+                <parameter name="StartBand" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>30</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="DCAGroupRollOut" datasize="1" arraysize="1">
+            <parameter name="TargetCH" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>16</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="Tap" datasize="2" arraysize="1">
+        <parameter name="Interval" type="uint16_t" arraysize="1">
+            <minimum>200</minimum>
+            <maximum>2400</maximum>
+            <default>500</default>
+            <step>1</step>
+            <unit>ms</unit>
+        </parameter>
+    </collection>
+    <collection name="FaderBank" datasize="175" arraysize="1">
+        <parameter name="SelectedBank" type="uint32_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>6</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <collection name="Bank" datasize="13" arraysize="7">
+            <parameter name="SelectedCH" type="uint32_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0xFFFFFFFFUL</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <collection name="ChStrip" datasize="1" arraysize="8">
+                <parameter name="SelectedSide" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+            <collection name="MasterStrip" datasize="1" arraysize="1">
+                <parameter name="SelectedSide" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="MasterStrip" datasize="4" arraysize="4">
+            <parameter name="Source" type="uint32_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0xFFFFFFFFUL</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="CustomBank" datasize="32" arraysize="2">
+            <collection name="ChStrip" datasize="4" arraysize="8">
+                <parameter name="Source" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="DAWRemote" datasize="4" arraysize="1">
+        <parameter name="DAWMode" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>1</default>
+            <step>1</step>
+        </parameter>
+        <parameter name="SelectedFunction" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>7</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <collection name="DAWRemoteKeys" datasize="2" arraysize="1">
+            <parameter name="Enable" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="KeyMode1_2" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+    </collection>
+</collections>
+</function>

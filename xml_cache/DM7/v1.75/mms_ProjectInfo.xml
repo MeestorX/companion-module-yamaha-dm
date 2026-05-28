@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<function name="ProjectInfo" collections="4" parameters="15" datasize="266" stringsize="16">
+<collections>
+    <collection name="Info" datasize="266" arraysize="1">
+        <parameter name="ProductName" type="string" arraysize="1">
+            <maximum>32</maximum>
+            <default></default>
+        </parameter>
+        <parameter name="ProductSubName" type="string" arraysize="1">
+            <maximum>32</maximum>
+            <default></default>
+        </parameter>
+        <parameter name="Comment" type="string" arraysize="1">
+            <maximum>128</maximum>
+            <default></default>
+        </parameter>
+        <parameter name="OwnerName" type="string" arraysize="1">
+            <maximum>32</maximum>
+            <default></default>
+        </parameter>
+        <parameter name="Category" type="string" arraysize="1">
+            <maximum>24</maximum>
+            <default>All</default>
+        </parameter>
+        <parameter name="UnitMode" type="string" arraysize="1">
+            <maximum>8</maximum>
+            <default>Default</default>
+        </parameter>
+        <parameter name="Split" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+        </parameter>
+        <collection name="SplitPoint" datasize="2" arraysize="1">
+            <parameter name="InputChannel" type="uint8_t" arraysize="1">
+                <minimum>60</minimum>
+                <maximum>120</maximum>
+                <default>120</default>
+            </parameter>
+            <parameter name="Mix" type="uint8_t" arraysize="1">
+                <minimum>12</minimum>
+                <maximum>48</maximum>
+                <default>48</default>
+            </parameter>
+        </collection>
+        <collection name="TimeStamp" datasize="7" arraysize="1">
+            <parameter name="Year" type="uint16_t" arraysize="1">
+                <minimum>2000</minimum>
+                <maximum>9999</maximum>
+                <default>2000</default>
+            </parameter>
+            <parameter name="Month" type="uint8_t" arraysize="1">
+                <minimum>1</minimum>
+                <maximum>12</maximum>
+                <default>1</default>
+            </parameter>
+            <parameter name="Day" type="uint8_t" arraysize="1">
+                <minimum>1</minimum>
+                <maximum>31</maximum>
+                <default>1</default>
+            </parameter>
+            <parameter name="Hour" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>23</maximum>
+                <default>0</default>
+            </parameter>
+            <parameter name="Minute" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>59</maximum>
+                <default>0</default>
+            </parameter>
+            <parameter name="Second" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>61</maximum>
+                <default>0</default>
+            </parameter>
+        </collection>
+    </collection>
+</collections>
+</function>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<function name="PresetInfo" collections="3" parameters="20" datasize="478" stringsize="12">
+<collections>
+    <collection name="Info" datasize="478" arraysize="1">
+        <parameter name="ProductName" type="string" arraysize="1">
+            <maximum>32</maximum>
+            <default>DM3</default>
+        </parameter>
+        <parameter name="ProductSubName" type="string" arraysize="1">
+            <maximum>32</maximum>
+        </parameter>
+        <parameter name="IncludedChNum" type="uint8_t" arraysize="1">
+            <minimum>1</minimum>
+            <maximum>16</maximum>
+            <default>1</default>
+        </parameter>
+        <parameter name="ChType" type="string" arraysize="16">
+            <maximum>4</maximum>
+            <default>CH</default>
+        </parameter>
+        <parameter name="Ch" type="uint8_t" arraysize="16">
+            <minimum>0</minimum>
+            <maximum>255</maximum>
+            <default>0</default>
+        </parameter>
+        <parameter name="Protect" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+            <kind>31</kind>
+        </parameter>
+        <parameter name="Title" type="string" arraysize="1">
+            <maximum>64</maximum>
+        </parameter>
+        <parameter name="Comment" type="string" arraysize="1">
+            <maximum>128</maximum>
+        </parameter>
+        <parameter name="OwnerName" type="string" arraysize="1">
+            <maximum>32</maximum>
+        </parameter>
+        <parameter name="Category" type="string" arraysize="1">
+            <maximum>16</maximum>
+        </parameter>
+        <parameter name="Name" type="string" arraysize="1">
+            <maximum>64</maximum>
+        </parameter>
+        <parameter name="Color" type="string" arraysize="1">
+            <maximum>8</maximum>
+            <default>Blue</default>
+            <kind>4</kind>
+        </parameter>
+        <parameter name="Icon" type="string" arraysize="1">
+            <maximum>12</maximum>
+            <kind>26</kind>
+        </parameter>
+        <parameter name="Rating" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>3</maximum>
+        </parameter>
+        <collection name="TimeStamp" datasize="7" arraysize="1">
+            <parameter name="Year" type="uint16_t" arraysize="1">
+                <minimum>2000</minimum>
+                <maximum>9999</maximum>
+            </parameter>
+            <parameter name="Month" type="uint8_t" arraysize="1">
+                <minimum>1</minimum>
+                <maximum>12</maximum>
+            </parameter>
+            <parameter name="Day" type="uint8_t" arraysize="1">
+                <minimum>1</minimum>
+                <maximum>31</maximum>
+            </parameter>
+            <parameter name="Hour" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>23</maximum>
+            </parameter>
+            <parameter name="Minute" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>59</maximum>
+            </parameter>
+            <parameter name="Second" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>61</maximum>
+            </parameter>
+        </collection>
+    </collection>
+</collections>
+</function>

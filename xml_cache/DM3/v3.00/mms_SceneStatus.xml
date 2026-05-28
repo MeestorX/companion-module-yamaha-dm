@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<function name="SceneStatus" collections="5" parameters="12" datasize="40800" stringsize="4">
+<collections>
+    <collection name="Bank" datasize="20400" arraysize="2">
+        <collection name="Info" datasize="204" arraysize="100">
+            <parameter name="DataType" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="Protect" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Title" type="string" arraysize="1">
+                <maximum>64</maximum>
+            </parameter>
+            <parameter name="Comment" type="string" arraysize="1">
+                <maximum>128</maximum>
+            </parameter>
+            <collection name="TimeStamp" datasize="7" arraysize="1">
+                <parameter name="Year" type="uint16_t" arraysize="1">
+                    <minimum>2000</minimum>
+                    <maximum>9999</maximum>
+                </parameter>
+                <parameter name="Month" type="uint8_t" arraysize="1">
+                    <minimum>1</minimum>
+                    <maximum>12</maximum>
+                </parameter>
+                <parameter name="Day" type="uint8_t" arraysize="1">
+                    <minimum>1</minimum>
+                    <maximum>31</maximum>
+                </parameter>
+                <parameter name="Hour" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>23</maximum>
+                </parameter>
+                <parameter name="Minute" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>59</maximum>
+                </parameter>
+                <parameter name="Second" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>61</maximum>
+                </parameter>
+            </collection>
+            <collection name="Fading" datasize="3" arraysize="1">
+                <parameter name="FadeTime" type="uint16_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>600</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <unit>sec</unit>
+                    <scaling>10</scaling>
+                </parameter>
+                <parameter name="On" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+</collections>
+</function>

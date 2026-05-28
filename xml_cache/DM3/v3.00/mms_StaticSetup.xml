@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<function name="StaticSetup" collections="27" parameters="39" datasize="972" stringsize="41">
+<collections>
+    <collection name="Brightness" datasize="11" arraysize="1">
+        <parameter name="Select" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <collection name="Bank" datasize="5" arraysize="2">
+            <parameter name="PowerSavingSecond" type="uint16_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0xFFFF</maximum>
+                <default>0xFFFF</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="ScreenBrightness" type="uint8_t" arraysize="1">
+                <minimum>1</minimum>
+                <maximum>20</maximum>
+                <default>20</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="PanelBrightness" type="uint8_t" arraysize="1">
+                <minimum>1</minimum>
+                <maximum>20</maximum>
+                <default>15</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="ScreenAppearance" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="Fan" datasize="5" arraysize="1">
+        <parameter name="Mode" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>2</maximum>
+            <default>1</default>
+            <step>1</step>
+        </parameter>
+        <collection name="Temperature" datasize="4" arraysize="1">
+            <parameter name="On" type="uint16_t" arraysize="1">
+                <minimum>400</minimum>
+                <maximum>600</maximum>
+                <default>600</default>
+                <step>5</step>
+                <scaling>10</scaling>
+            </parameter>
+            <parameter name="Off" type="uint16_t" arraysize="1">
+                <minimum>400</minimum>
+                <maximum>600</maximum>
+                <default>400</default>
+                <step>5</step>
+                <scaling>10</scaling>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="Preference" datasize="35" arraysize="1">
+        <collection name="Help" datasize="33" arraysize="1">
+            <parameter name="Language" type="string" arraysize="1">
+                <maximum>32</maximum>
+                <default>English</default>
+            </parameter>
+            <parameter name="ShowAtStartup" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="TouchPanel" datasize="1" arraysize="1">
+            <parameter name="EyesightLevel" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="HomeKey" datasize="1" arraysize="1">
+            <parameter name="Mode" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>6</maximum>
+                <default>3</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="DateTime" datasize="67" arraysize="1">
+        <parameter name="CityName" type="string" arraysize="1">
+            <maximum>64</maximum>
+            <default>Tokyo</default>
+        </parameter>
+        <parameter name="SummerTime" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <parameter name="DateFormat" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>2</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <parameter name="TimeFormat" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+    </collection>
+    <collection name="Network" datasize="32" arraysize="1">
+        <parameter name="DeviceName" type="string" arraysize="1">
+            <maximum>32</maximum>
+            <default>Yamaha DM3</default>
+        </parameter>
+    </collection>
+    <collection name="Editor" datasize="273" arraysize="1">
+        <collection name="WindowSetup" datasize="6" arraysize="1">
+            <parameter name="MainAreaSize" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="Maximize" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="Width" type="uint16_t" arraysize="1">
+                <minimum>1200</minimum>
+                <maximum>65535</maximum>
+                <default>1200</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="Height" type="uint16_t" arraysize="1">
+                <minimum>700</minimum>
+                <maximum>65535</maximum>
+                <default>700</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="Layout" datasize="1" arraysize="1">
+            <collection name="LevelMeter" datasize="1" arraysize="1">
+                <parameter name="Visible" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="LevelMeter" datasize="1" arraysize="1">
+            <collection name="Unicast" datasize="1" arraysize="1">
+                <parameter name="On" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="Synchronize" datasize="265" arraysize="1">
+            <parameter name="EthernetAdapter" type="string" arraysize="1">
+                <maximum>256</maximum>
+                <default></default>
+            </parameter>
+            <parameter name="LastDeviceMAC" type="uint8_t" arraysize="6">
+                <minimum>0</minimum>
+                <maximum>255</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="Direction" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <collection name="SyncSelectedCH" datasize="2" arraysize="1">
+                <parameter name="ConsoleToEditor" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+                <parameter name="EditorToConsole" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="UserAccount" datasize="1" arraysize="1">
+        <parameter name="CurrentUserIndex" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+    </collection>
+    <collection name="R2dStatus" datasize="72" arraysize="1">
+        <collection name="Fader" datasize="4" arraysize="9">
+            <parameter name="Odometer" type="uint32_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0xFFFFFFFFUL</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="Motor" datasize="4" arraysize="9">
+            <parameter name="Odometer" type="uint32_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0xFFFFFFFFUL</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="Dante" datasize="476" arraysize="1">
+        <collection name="Config" datasize="17" arraysize="1">
+            <parameter name="DeviceID" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0x1F</maximum>
+                <default>1</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="SoundNetworkMode" type="string" arraysize="1">
+                <maximum>16</maximum>
+                <default>Daisy Chain</default>
+            </parameter>
+        </collection>
+        <collection name="DDM" datasize="459" arraysize="1">
+            <collection name="DomainInfo" datasize="459" arraysize="1">
+                <parameter name="AddressType" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+                <parameter name="ServerName" type="string" arraysize="1">
+                    <maximum>99</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="IPv4Address" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+                <parameter name="LoginName" type="string" arraysize="1">
+                    <maximum>99</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="Password" type="string" arraysize="1">
+                    <maximum>255</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="KeepMeLoggedIn" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+</collections>
+</function>

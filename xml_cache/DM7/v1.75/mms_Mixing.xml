@@ -1,0 +1,3309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<function name="Mixing" collections="215" parameters="392" datasize="309618" stringsize="2204" version="01.00.00 A">
+<collections>
+    <collection name="InputChannel" datasize="1785" arraysize="120">
+        <parameter name="GainGang" type="bit" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+            <kind>31</kind>
+        </parameter>
+        <parameter name="DelayGang" type="bit" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+            <kind>31</kind>
+        </parameter>
+        <collection name="Signal" datasize="9" arraysize="1">
+            <parameter name="Relation" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0xFF</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>42</kind>
+            </parameter>
+            <parameter name="StereoInputType" type="string" arraysize="1">
+                <maximum>8</maximum>
+                <default>STEREO</default>
+            </parameter>
+        </collection>
+        <collection name="Label" datasize="84" arraysize="1">
+            <parameter name="Name" type="string" arraysize="1">
+                <maximum>64</maximum>
+                <default></default>
+            </parameter>
+            <parameter name="Color" type="string" arraysize="1">
+                <maximum>8</maximum>
+                <default>Blue</default>
+                <kind>4</kind>
+            </parameter>
+            <parameter name="Icon" type="string" arraysize="1">
+                <maximum>12</maximum>
+                <default>Blank</default>
+                <kind>26</kind>
+            </parameter>
+        </collection>
+        <collection name="InPatch" datasize="9" arraysize="1">
+            <parameter name="Select" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <collection name="Bank" datasize="4" arraysize="2">
+                <parameter name="Source" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>35</kind>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="VirtualSC" datasize="5" arraysize="1">
+            <parameter name="Source" type="uint32_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0xFFFFFFFFUL</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>35</kind>
+            </parameter>
+            <parameter name="Safe" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="Input" datasize="3" arraysize="1">
+            <parameter name="Phase" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Gain" type="int16_t" arraysize="1">
+                <minimum>-9600</minimum>
+                <maximum>2400</maximum>
+                <default>0</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <scaling>100</scaling>
+                <kind>56</kind>
+                <nameformat>D.GAIN\CH #0</nameformat>
+            </parameter>
+        </collection>
+        <collection name="Insert" datasize="18" arraysize="1">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="Point" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>255</maximum>
+                <default>60</default>
+                <step>10</step>
+                <kind>53</kind>
+            </parameter>
+            <collection name="Module" datasize="4" arraysize="4">
+                <collection name="Patch" datasize="4" arraysize="1">
+                    <parameter name="Source" type="uint32_t" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>0xFFFFFFFFUL</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>35</kind>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+        <collection name="DirectOut" datasize="5" arraysize="1">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="Level" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>0</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <nominal>0</nominal>
+                <scaling>100</scaling>
+                <kind>63</kind>
+                <nameformat>D.OUT\LEVEL\CH #0</nameformat>
+            </parameter>
+            <parameter name="Point" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>255</maximum>
+                <default>30</default>
+                <step>10</step>
+                <kind>53</kind>
+            </parameter>
+            <parameter name="FollowOn" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="FollowFader" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="FollowDCA" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+        </collection>
+        <collection name="HPF" datasize="6" arraysize="4">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>101</kind>
+            </parameter>
+            <parameter name="Frequency" type="uint32_t" arraysize="1">
+                <minimum>200</minimum>
+                <maximum>20000</maximum>
+                <default>800</default>
+                <step>1</step>
+                <unit>Hz</unit>
+                <scaling>10</scaling>
+                <kind>59</kind>
+                <nameformat>HPF\FREQ\CH #0</nameformat>
+            </parameter>
+            <parameter name="Slope" type="uint8_t" arraysize="1">
+                <minimum>6</minimum>
+                <maximum>24</maximum>
+                <default>12</default>
+                <step>6</step>
+                <unit>dB/oct</unit>
+                <kind>25</kind>
+            </parameter>
+        </collection>
+        <collection name="LPF" datasize="6" arraysize="4">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>102</kind>
+            </parameter>
+            <parameter name="Frequency" type="uint32_t" arraysize="1">
+                <minimum>200</minimum>
+                <maximum>200000</maximum>
+                <default>160000</default>
+                <step>1</step>
+                <unit>Hz</unit>
+                <scaling>10</scaling>
+                <kind>64</kind>
+                <nameformat>LPF\FREQ\CH #0</nameformat>
+            </parameter>
+            <parameter name="Slope" type="uint8_t" arraysize="1">
+                <minimum>6</minimum>
+                <maximum>12</maximum>
+                <default>12</default>
+                <step>6</step>
+                <unit>dB/oct</unit>
+                <kind>29</kind>
+            </parameter>
+        </collection>
+        <collection name="PEQ" datasize="294" arraysize="1">
+            <parameter name="Select" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>1</kind>
+            </parameter>
+            <parameter name="ActorSelect" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>3</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>1</kind>
+            </parameter>
+            <collection name="Bank" datasize="73" arraysize="4">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>67</kind>
+                </parameter>
+                <parameter name="Type" type="string" arraysize="1">
+                    <maximum>12</maximum>
+                    <default>PRECISE</default>
+                    <kind>73</kind>
+                </parameter>
+                <collection name="Attenuator" datasize="2" arraysize="1">
+                    <parameter name="Gain" type="int16_t" arraysize="1">
+                        <minimum>-9600</minimum>
+                        <maximum>2400</maximum>
+                        <default>0</default>
+                        <step>10</step>
+                        <unit>dB</unit>
+                        <nominal>0</nominal>
+                        <scaling>100</scaling>
+                        <kind>77</kind>
+                        <nameformat>EQ\ATT\CH #0</nameformat>
+                    </parameter>
+                </collection>
+                <collection name="Band" datasize="9" arraysize="4">
+                    <parameter name="Bypass" type="bit" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>67</kind>
+                    </parameter>
+                    <parameter name="Frequency" type="uint32_t" arraysize="1">
+                        <minimum>200</minimum>
+                        <maximum>200000</maximum>
+                        <default>200</default>
+                        <step>1</step>
+                        <unit>Hz</unit>
+                        <scaling>10</scaling>
+                        <kind>69</kind>
+                        <nameformat>EQ\BAND #3 FREQ\CH #0</nameformat>
+                    </parameter>
+                    <parameter name="Gain" type="int16_t" arraysize="1">
+                        <minimum>-1800</minimum>
+                        <maximum>1800</maximum>
+                        <default>0</default>
+                        <step>10</step>
+                        <unit>dB</unit>
+                        <nominal>0</nominal>
+                        <scaling>100</scaling>
+                        <kind>70</kind>
+                        <nameformat>EQ\BAND #3 GAIN\CH #0</nameformat>
+                    </parameter>
+                    <parameter name="Q" type="uint16_t" arraysize="1">
+                        <minimum>100</minimum>
+                        <maximum>16000</maximum>
+                        <default>1400</default>
+                        <step>1</step>
+                        <scaling>1000</scaling>
+                        <kind>71</kind>
+                        <nameformat>EQ\BAND #3 Q\CH #0</nameformat>
+                    </parameter>
+                </collection>
+                <collection name="LowShelving" datasize="3" arraysize="1">
+                    <parameter name="On" type="bit" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>1</default>
+                        <step>1</step>
+                        <kind>67</kind>
+                    </parameter>
+                    <parameter name="Q" type="uint16_t" arraysize="1">
+                        <minimum>100</minimum>
+                        <maximum>10000</maximum>
+                        <default>4000</default>
+                        <step>1</step>
+                        <scaling>1000</scaling>
+                        <kind>72</kind>
+                        <nameformat>EQ\BAND 1 Q\CH #0</nameformat>
+                    </parameter>
+                </collection>
+                <collection name="HighShelving" datasize="3" arraysize="1">
+                    <parameter name="On" type="bit" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>1</default>
+                        <step>1</step>
+                        <kind>67</kind>
+                    </parameter>
+                    <parameter name="Q" type="uint16_t" arraysize="1">
+                        <minimum>100</minimum>
+                        <maximum>10000</maximum>
+                        <default>4000</default>
+                        <step>1</step>
+                        <scaling>1000</scaling>
+                        <kind>72</kind>
+                        <nameformat>EQ\BAND 4 Q\CH #0</nameformat>
+                    </parameter>
+                </collection>
+                <collection name="Label" datasize="16" arraysize="1">
+                    <parameter name="Name" type="string" arraysize="1">
+                        <maximum>16</maximum>
+                        <default></default>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+        <collection name="Proc" datasize="1" arraysize="1">
+            <parameter name="EQDynOrder" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>53</kind>
+            </parameter>
+        </collection>
+        <collection name="Dynamics" datasize="422" arraysize="2">
+            <parameter name="Select" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>1</kind>
+            </parameter>
+            <parameter name="ActorSelect" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>3</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>1</kind>
+            </parameter>
+            <collection name="Bank" datasize="74" arraysize="4">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>68</kind>
+                </parameter>
+                <parameter name="Type" type="string" arraysize="1">
+                    <maximum>16</maximum>
+                    <default>GATE</default>
+                    <kind>58</kind>
+                </parameter>
+                <parameter name="MixBalance" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>100</maximum>
+                    <default>100</default>
+                    <step>1</step>
+                    <kind>95</kind>
+                </parameter>
+                <collection name="Parameter" datasize="4" arraysize="10">
+                    <parameter name="Value" type="int32_t" arraysize="1">
+                        <minimum>-2147483648</minimum>
+                        <maximum>2147483647</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>96</kind>
+                    </parameter>
+                </collection>
+                <collection name="Label" datasize="16" arraysize="1">
+                    <parameter name="Name" type="string" arraysize="1">
+                        <maximum>16</maximum>
+                        <default></default>
+                    </parameter>
+                </collection>
+            </collection>
+            <collection name="KeyIn" datasize="31" arraysize="4">
+                <parameter name="SourceSelect" type="string" arraysize="1">
+                    <maximum>16</maximum>
+                    <default>SELF POST EQ</default>
+                    <kind>45</kind>
+                </parameter>
+                <parameter name="Source" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>35</kind>
+                </parameter>
+                <parameter name="FilterType" type="string" arraysize="1">
+                    <maximum>5</maximum>
+                    <default>NONE</default>
+                    <kind>10</kind>
+                </parameter>
+                <parameter name="FilterQ" type="uint16_t" arraysize="1">
+                    <minimum>100</minimum>
+                    <maximum>10000</maximum>
+                    <default>700</default>
+                    <step>1</step>
+                    <scaling>1000</scaling>
+                    <kind>75</kind>
+                    <nameformat>DYN #1\KEY IN\FILTER Q\CH #0</nameformat>
+                </parameter>
+                <parameter name="FilterFrequency" type="uint32_t" arraysize="1">
+                    <minimum>200</minimum>
+                    <maximum>200000</maximum>
+                    <default>125000</default>
+                    <step>1</step>
+                    <unit>Hz</unit>
+                    <scaling>10</scaling>
+                    <kind>11</kind>
+                    <nameformat>DYN #1\KEY IN\FILTER FREQ\CH #0</nameformat>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="Delay" datasize="6" arraysize="1">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="Time" type="uint32_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1000000</maximum>
+                <default>0</default>
+                <step>10</step>
+                <unit>ms</unit>
+                <scaling>1000</scaling>
+                <kind>57</kind>
+                <nameformat>DELAY\TIME\CH #0</nameformat>
+            </parameter>
+            <collection name="Insert" datasize="1" arraysize="1">
+                <parameter name="Point" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>255</maximum>
+                    <default>100</default>
+                    <step>10</step>
+                    <kind>53</kind>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="ToMix" datasize="7" arraysize="48">
+            <parameter name="Pre" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="PrePoint" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>255</maximum>
+                <default>100</default>
+                <step>10</step>
+                <kind>53</kind>
+            </parameter>
+            <parameter name="PostPoint" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>255</maximum>
+                <default>120</default>
+                <step>10</step>
+                <kind>53</kind>
+            </parameter>
+            <parameter name="Level" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>-32768</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <nominal>0</nominal>
+                <scaling>100</scaling>
+                <kind>61</kind>
+                <nameformat>TO MIX #1\SEND LEVEL\CH #0</nameformat>
+            </parameter>
+            <parameter name="Pan" type="int8_t" arraysize="1">
+                <minimum>-63</minimum>
+                <maximum>63</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>32</kind>
+                <nameformat>TO MIX #1\PAN/BAL\CH #0</nameformat>
+            </parameter>
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="FollowOn" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="FollowFader" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="FollowDCA" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="FollowPan" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="FollowPanMode" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+        </collection>
+        <collection name="ToMatrix" datasize="7" arraysize="12">
+            <parameter name="Pre" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="PrePoint" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>255</maximum>
+                <default>100</default>
+                <step>10</step>
+                <kind>53</kind>
+            </parameter>
+            <parameter name="PostPoint" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>255</maximum>
+                <default>120</default>
+                <step>10</step>
+                <kind>53</kind>
+            </parameter>
+            <parameter name="Level" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>-32768</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <nominal>0</nominal>
+                <scaling>100</scaling>
+                <kind>62</kind>
+                <nameformat>TO MTX #1\SEND LEVEL\CH #0</nameformat>
+            </parameter>
+            <parameter name="Pan" type="int8_t" arraysize="1">
+                <minimum>-63</minimum>
+                <maximum>63</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>32</kind>
+                <nameformat>TO MTX #1\PAN/BAL\CH #0</nameformat>
+            </parameter>
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="FollowOn" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="FollowFader" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="FollowDCA" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="FollowPan" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="FollowPanMode" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+        </collection>
+        <collection name="ToStereo" datasize="20" arraysize="1">
+            <parameter name="PanMode" type="string" arraysize="1">
+                <maximum>5</maximum>
+                <default>ST/M</default>
+                <kind>34</kind>
+            </parameter>
+            <parameter name="CSR" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>100</maximum>
+                <default>50</default>
+                <step>1</step>
+                <kind>53</kind>
+                <nameformat>CSR\CH #0</nameformat>
+            </parameter>
+            <parameter name="PanType" type="string" arraysize="1">
+                <maximum>12</maximum>
+                <default>PAN</default>
+                <kind>45</kind>
+            </parameter>
+            <parameter name="Pan" type="int8_t" arraysize="1">
+                <minimum>-63</minimum>
+                <maximum>63</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>32</kind>
+                <nameformat>PAN/BAL\CH #0</nameformat>
+            </parameter>
+            <parameter name="ToStereoA" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="ToStereoB" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="ToLCR" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+        </collection>
+        <collection name="DCA" datasize="3" arraysize="1">
+            <parameter name="Assign" type="bit" arraysize="24">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+        </collection>
+        <collection name="MuteGroup" datasize="2" arraysize="1">
+            <parameter name="Assign" type="bit" arraysize="12">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+        </collection>
+        <collection name="Fader" datasize="3" arraysize="1">
+            <parameter name="Level" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>-32768</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <nominal>0</nominal>
+                <scaling>100</scaling>
+                <kind>60</kind>
+                <nameformat>FADER\CH #0</nameformat>
+            </parameter>
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+        </collection>
+        <collection name="Surround" datasize="8" arraysize="1">
+            <collection name="ToSurround" datasize="1" arraysize="2">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+            <collection name="Pan" datasize="4" arraysize="1">
+                <parameter name="LR" type="int8_t" arraysize="1">
+                    <minimum>-63</minimum>
+                    <maximum>63</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>32</kind>
+                    <nameformat>SURR\LR\CH #0</nameformat>
+                </parameter>
+                <parameter name="FR" type="int8_t" arraysize="1">
+                    <minimum>-63</minimum>
+                    <maximum>63</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>33</kind>
+                    <nameformat>SURR\FR\CH #0</nameformat>
+                </parameter>
+                <parameter name="Divergence" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>100</maximum>
+                    <default>100</default>
+                    <step>1</step>
+                    <nameformat>SURR\DIV\CH #0</nameformat>
+                </parameter>
+                <parameter name="ToL" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="ToR" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="ToC" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="ToLFE" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="ToLs" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="ToRs" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="LFE" datasize="2" arraysize="1">
+                <parameter name="Level" type="int16_t" arraysize="1">
+                    <minimum>-32768</minimum>
+                    <maximum>1000</maximum>
+                    <default>-32768</default>
+                    <step>1</step>
+                    <unit>dB</unit>
+                    <nominal>0</nominal>
+                    <scaling>100</scaling>
+                    <kind>27</kind>
+                    <nameformat>SURR\LFE\CH #0</nameformat>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="Automixer" datasize="1" arraysize="1">
+            <parameter name="Assign" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>64</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+        <collection name="ChannelLink" datasize="1" arraysize="1">
+            <parameter name="GroupId" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>52</maximum>
+                <default>0</default>
+                <step>1</step>
+                <nominal>0</nominal>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="Mix" datasize="647" arraysize="48">
+        <parameter name="BusType" type="string" arraysize="1">
+            <maximum>8</maximum>
+            <default>VARI</default>
+            <kind>3</kind>
+        </parameter>
+        <parameter name="DelayGang" type="bit" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+            <kind>31</kind>
+        </parameter>
+        <collection name="Signal" datasize="2" arraysize="1">
+            <parameter name="Relation" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0xFF</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>42</kind>
+            </parameter>
+            <parameter name="PanLink" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="Label" datasize="84" arraysize="1">
+            <parameter name="Name" type="string" arraysize="1">
+                <maximum>64</maximum>
+                <default></default>
+            </parameter>
+            <parameter name="Color" type="string" arraysize="1">
+                <maximum>8</maximum>
+                <default>Orange</default>
+                <kind>4</kind>
+            </parameter>
+            <parameter name="Icon" type="string" arraysize="1">
+                <maximum>12</maximum>
+                <default>Blank</default>
+                <kind>26</kind>
+            </parameter>
+        </collection>
+        <collection name="Insert" datasize="18" arraysize="1">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="Point" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>255</maximum>
+                <default>200</default>
+                <step>10</step>
+                <kind>53</kind>
+            </parameter>
+            <collection name="Module" datasize="4" arraysize="4">
+                <collection name="Patch" datasize="4" arraysize="1">
+                    <parameter name="Source" type="uint32_t" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>0xFFFFFFFFUL</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>35</kind>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+        <collection name="HPF" datasize="6" arraysize="2">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>101</kind>
+            </parameter>
+            <parameter name="Frequency" type="uint32_t" arraysize="1">
+                <minimum>200</minimum>
+                <maximum>20000</maximum>
+                <default>800</default>
+                <step>1</step>
+                <unit>Hz</unit>
+                <scaling>10</scaling>
+                <kind>59</kind>
+                <nameformat>HPF\FREQ\MIX #0</nameformat>
+            </parameter>
+            <parameter name="Slope" type="uint8_t" arraysize="1">
+                <minimum>6</minimum>
+                <maximum>24</maximum>
+                <default>12</default>
+                <step>6</step>
+                <unit>dB/oct</unit>
+                <kind>25</kind>
+            </parameter>
+        </collection>
+        <collection name="LPF" datasize="6" arraysize="2">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>102</kind>
+            </parameter>
+            <parameter name="Frequency" type="uint32_t" arraysize="1">
+                <minimum>200</minimum>
+                <maximum>200000</maximum>
+                <default>160000</default>
+                <step>1</step>
+                <unit>Hz</unit>
+                <scaling>10</scaling>
+                <kind>64</kind>
+                <nameformat>LPF\FREQ\MIX #0</nameformat>
+            </parameter>
+            <parameter name="Slope" type="uint8_t" arraysize="1">
+                <minimum>6</minimum>
+                <maximum>12</maximum>
+                <default>12</default>
+                <step>6</step>
+                <unit>dB/oct</unit>
+                <kind>29</kind>
+            </parameter>
+        </collection>
+        <collection name="PEQ" datasize="187" arraysize="1">
+            <parameter name="Select" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>1</kind>
+            </parameter>
+            <collection name="Bank" datasize="93" arraysize="2">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>67</kind>
+                </parameter>
+                <parameter name="Type" type="string" arraysize="1">
+                    <maximum>12</maximum>
+                    <default>PRECISE</default>
+                    <kind>73</kind>
+                </parameter>
+                <collection name="Attenuator" datasize="2" arraysize="1">
+                    <parameter name="Gain" type="int16_t" arraysize="1">
+                        <minimum>-9600</minimum>
+                        <maximum>2400</maximum>
+                        <default>0</default>
+                        <step>10</step>
+                        <unit>dB</unit>
+                        <nominal>0</nominal>
+                        <scaling>100</scaling>
+                        <kind>77</kind>
+                        <nameformat>EQ\ATT\CH #0</nameformat>
+                    </parameter>
+                </collection>
+                <collection name="Band" datasize="9" arraysize="8">
+                    <parameter name="Bypass" type="bit" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>67</kind>
+                    </parameter>
+                    <parameter name="Frequency" type="uint32_t" arraysize="1">
+                        <minimum>200</minimum>
+                        <maximum>200000</maximum>
+                        <default>200</default>
+                        <step>1</step>
+                        <unit>Hz</unit>
+                        <scaling>10</scaling>
+                        <kind>69</kind>
+                        <nameformat>EQ\BAND #3 FREQ\MIX #0</nameformat>
+                    </parameter>
+                    <parameter name="Gain" type="int16_t" arraysize="1">
+                        <minimum>-1800</minimum>
+                        <maximum>1800</maximum>
+                        <default>0</default>
+                        <step>10</step>
+                        <unit>dB</unit>
+                        <nominal>0</nominal>
+                        <scaling>100</scaling>
+                        <kind>70</kind>
+                        <nameformat>EQ\BAND #3 GAIN\MIX #0</nameformat>
+                    </parameter>
+                    <parameter name="Q" type="uint16_t" arraysize="1">
+                        <minimum>100</minimum>
+                        <maximum>16000</maximum>
+                        <default>4000</default>
+                        <step>1</step>
+                        <scaling>1000</scaling>
+                        <kind>71</kind>
+                        <nameformat>EQ\BAND #3 Q\MIX #0</nameformat>
+                    </parameter>
+                </collection>
+                <collection name="LowShelving" datasize="3" arraysize="1">
+                    <parameter name="On" type="bit" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>67</kind>
+                    </parameter>
+                    <parameter name="Q" type="uint16_t" arraysize="1">
+                        <minimum>100</minimum>
+                        <maximum>10000</maximum>
+                        <default>4000</default>
+                        <step>1</step>
+                        <scaling>1000</scaling>
+                        <kind>72</kind>
+                        <nameformat>EQ\BAND 1 Q\MIX #0</nameformat>
+                    </parameter>
+                </collection>
+                <collection name="HighShelving" datasize="3" arraysize="1">
+                    <parameter name="On" type="bit" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>67</kind>
+                    </parameter>
+                    <parameter name="Q" type="uint16_t" arraysize="1">
+                        <minimum>100</minimum>
+                        <maximum>10000</maximum>
+                        <default>4000</default>
+                        <step>1</step>
+                        <scaling>1000</scaling>
+                        <kind>72</kind>
+                        <nameformat>EQ\BAND 8 Q\MIX #0</nameformat>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+        <collection name="Proc" datasize="1" arraysize="1">
+            <parameter name="EQDynOrder" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>53</kind>
+            </parameter>
+        </collection>
+        <collection name="Dynamics" datasize="179" arraysize="1">
+            <parameter name="Select" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>1</kind>
+            </parameter>
+            <collection name="Bank" datasize="58" arraysize="2">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>68</kind>
+                </parameter>
+                <parameter name="Type" type="string" arraysize="1">
+                    <maximum>16</maximum>
+                    <default>Classic Comp</default>
+                    <kind>58</kind>
+                </parameter>
+                <parameter name="MixBalance" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>100</maximum>
+                    <default>100</default>
+                    <step>1</step>
+                    <kind>95</kind>
+                </parameter>
+                <collection name="Parameter" datasize="4" arraysize="10">
+                    <parameter name="Value" type="int32_t" arraysize="1">
+                        <minimum>-2147483648</minimum>
+                        <maximum>2147483647</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>96</kind>
+                    </parameter>
+                </collection>
+            </collection>
+            <collection name="KeyIn" datasize="31" arraysize="2">
+                <parameter name="SourceSelect" type="string" arraysize="1">
+                    <maximum>16</maximum>
+                    <default>SELF POST EQ</default>
+                    <kind>45</kind>
+                </parameter>
+                <parameter name="Source" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>35</kind>
+                </parameter>
+                <parameter name="FilterType" type="string" arraysize="1">
+                    <maximum>5</maximum>
+                    <default>NONE</default>
+                    <kind>10</kind>
+                </parameter>
+                <parameter name="FilterQ" type="uint16_t" arraysize="1">
+                    <minimum>100</minimum>
+                    <maximum>10000</maximum>
+                    <default>700</default>
+                    <step>1</step>
+                    <scaling>1000</scaling>
+                    <kind>75</kind>
+                    <nameformat>DYN #1\KEY IN\FILTER Q\MIX #0</nameformat>
+                </parameter>
+                <parameter name="FilterFrequency" type="uint32_t" arraysize="1">
+                    <minimum>200</minimum>
+                    <maximum>200000</maximum>
+                    <default>125000</default>
+                    <step>1</step>
+                    <unit>Hz</unit>
+                    <scaling>10</scaling>
+                    <kind>11</kind>
+                    <nameformat>DYN #1\KEY IN\FILTER FREQ\MIX #0</nameformat>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="Delay" datasize="6" arraysize="1">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="Time" type="uint32_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1000000</maximum>
+                <default>0</default>
+                <step>10</step>
+                <unit>ms</unit>
+                <scaling>1000</scaling>
+                <kind>57</kind>
+                <nameformat>DELAY\TIME\MIX #0</nameformat>
+            </parameter>
+            <collection name="Insert" datasize="1" arraysize="1">
+                <parameter name="Point" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>255</maximum>
+                    <default>100</default>
+                    <step>10</step>
+                    <kind>53</kind>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="ToMatrix" datasize="7" arraysize="12">
+            <parameter name="Pre" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="PrePoint" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>255</maximum>
+                <default>100</default>
+                <step>10</step>
+                <kind>53</kind>
+            </parameter>
+            <parameter name="PostPoint" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>255</maximum>
+                <default>120</default>
+                <step>10</step>
+                <kind>53</kind>
+            </parameter>
+            <parameter name="Level" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>-32768</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <nominal>0</nominal>
+                <scaling>100</scaling>
+                <kind>62</kind>
+                <nameformat>TO MTX #1\SEND LEVEL\MIX #0</nameformat>
+            </parameter>
+            <parameter name="Pan" type="int8_t" arraysize="1">
+                <minimum>-63</minimum>
+                <maximum>63</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>32</kind>
+                <nameformat>TO MTX #1\PAN/BAL\MIX #0</nameformat>
+            </parameter>
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="FollowOn" type="bit" arraysize="1">
+                <minimum>1</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="FollowFader" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="FollowDCA" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="FollowPan" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="FollowPanMode" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+        </collection>
+        <collection name="ToStereo" datasize="22" arraysize="1">
+            <parameter name="Point" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>255</maximum>
+                <default>110</default>
+                <step>10</step>
+            </parameter>
+            <parameter name="PanMode" type="string" arraysize="1">
+                <maximum>5</maximum>
+                <default>ST/M</default>
+                <kind>34</kind>
+            </parameter>
+            <parameter name="CSR" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>100</maximum>
+                <default>50</default>
+                <step>1</step>
+                <kind>53</kind>
+                <nameformat>CSR\MIX #0</nameformat>
+            </parameter>
+            <parameter name="Pan" type="int8_t" arraysize="1">
+                <minimum>-63</minimum>
+                <maximum>63</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>32</kind>
+                <nameformat>PAN/BAL\MIX #0</nameformat>
+            </parameter>
+            <parameter name="FollowOn" type="bit" arraysize="1">
+                <minimum>1</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="FollowFader" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="FollowDCA" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="PanType" type="string" arraysize="1">
+                <maximum>12</maximum>
+                <default>PAN</default>
+                <kind>45</kind>
+            </parameter>
+            <parameter name="ToStereoA" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="ToStereoB" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="ToLCR" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+        </collection>
+        <collection name="DCA" datasize="3" arraysize="1">
+            <parameter name="Assign" type="bit" arraysize="24">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+        </collection>
+        <collection name="MuteGroup" datasize="2" arraysize="1">
+            <parameter name="Assign" type="bit" arraysize="12">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+        </collection>
+        <collection name="Fader" datasize="3" arraysize="1">
+            <parameter name="Level" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>0</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <nominal>0</nominal>
+                <scaling>100</scaling>
+                <kind>60</kind>
+                <nameformat>FADER\MIX #0</nameformat>
+            </parameter>
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+        </collection>
+        <collection name="Out" datasize="1" arraysize="1">
+            <parameter name="Balance" type="int8_t" arraysize="1">
+                <minimum>-63</minimum>
+                <maximum>63</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>32</kind>
+                <nameformat>BALANCE\MIX #0</nameformat>
+            </parameter>
+        </collection>
+        <collection name="ChannelLink" datasize="1" arraysize="1">
+            <parameter name="GroupId" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>52</maximum>
+                <default>0</default>
+                <step>1</step>
+                <nominal>0</nominal>
+            </parameter>
+        </collection>
+        <collection name="MixMinus" datasize="15" arraysize="1">
+            <collection name="Owner" datasize="15" arraysize="1">
+                <parameter name="InputChannel" type="bit" arraysize="120">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="SubIn" datasize="6" arraysize="1">
+            <collection name="Patch" datasize="4" arraysize="1">
+                <parameter name="Source" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>35</kind>
+                </parameter>
+            </collection>
+            <collection name="Attenuator" datasize="2" arraysize="1">
+                <parameter name="Gain" type="int16_t" arraysize="1">
+                    <minimum>-9600</minimum>
+                    <maximum>2400</maximum>
+                    <default>0</default>
+                    <step>10</step>
+                    <unit>dB</unit>
+                    <nominal>0</nominal>
+                    <scaling>100</scaling>
+                    <kind>91</kind>
+                    <nameformat>SUB IN/ATT/MIX #0</nameformat>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="Matrix" datasize="518" arraysize="12">
+        <parameter name="DelayGang" type="bit" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+            <kind>31</kind>
+        </parameter>
+        <collection name="Signal" datasize="2" arraysize="1">
+            <parameter name="Relation" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0xFF</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>42</kind>
+            </parameter>
+            <parameter name="PanLink" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+        <collection name="Label" datasize="84" arraysize="1">
+            <parameter name="Name" type="string" arraysize="1">
+                <maximum>64</maximum>
+                <default></default>
+            </parameter>
+            <parameter name="Color" type="string" arraysize="1">
+                <maximum>8</maximum>
+                <default>Orange</default>
+                <kind>4</kind>
+            </parameter>
+            <parameter name="Icon" type="string" arraysize="1">
+                <maximum>12</maximum>
+                <default>Blank</default>
+                <kind>26</kind>
+            </parameter>
+        </collection>
+        <collection name="Insert" datasize="18" arraysize="1">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="Point" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>255</maximum>
+                <default>200</default>
+                <step>10</step>
+                <kind>53</kind>
+            </parameter>
+            <collection name="Module" datasize="4" arraysize="4">
+                <collection name="Patch" datasize="4" arraysize="1">
+                    <parameter name="Source" type="uint32_t" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>0xFFFFFFFFUL</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>35</kind>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+        <collection name="HPF" datasize="6" arraysize="2">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>101</kind>
+            </parameter>
+            <parameter name="Frequency" type="uint32_t" arraysize="1">
+                <minimum>200</minimum>
+                <maximum>20000</maximum>
+                <default>800</default>
+                <step>1</step>
+                <unit>Hz</unit>
+                <scaling>10</scaling>
+                <kind>59</kind>
+                <nameformat>HPF\FREQ\MTX #0</nameformat>
+            </parameter>
+            <parameter name="Slope" type="uint8_t" arraysize="1">
+                <minimum>6</minimum>
+                <maximum>24</maximum>
+                <default>12</default>
+                <step>6</step>
+                <unit>dB/oct</unit>
+                <kind>25</kind>
+            </parameter>
+        </collection>
+        <collection name="LPF" datasize="6" arraysize="2">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>102</kind>
+            </parameter>
+            <parameter name="Frequency" type="uint32_t" arraysize="1">
+                <minimum>200</minimum>
+                <maximum>200000</maximum>
+                <default>160000</default>
+                <step>1</step>
+                <unit>Hz</unit>
+                <scaling>10</scaling>
+                <kind>64</kind>
+                <nameformat>LPF\FREQ\MTX #0</nameformat>
+            </parameter>
+            <parameter name="Slope" type="uint8_t" arraysize="1">
+                <minimum>6</minimum>
+                <maximum>12</maximum>
+                <default>12</default>
+                <step>6</step>
+                <unit>dB/oct</unit>
+                <kind>29</kind>
+            </parameter>
+        </collection>
+        <collection name="PEQ" datasize="187" arraysize="1">
+            <parameter name="Select" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>1</kind>
+            </parameter>
+            <collection name="Bank" datasize="93" arraysize="2">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>67</kind>
+                </parameter>
+                <parameter name="Type" type="string" arraysize="1">
+                    <maximum>12</maximum>
+                    <default>PRECISE</default>
+                    <kind>73</kind>
+                </parameter>
+                <collection name="Attenuator" datasize="2" arraysize="1">
+                    <parameter name="Gain" type="int16_t" arraysize="1">
+                        <minimum>-9600</minimum>
+                        <maximum>2400</maximum>
+                        <default>0</default>
+                        <step>10</step>
+                        <unit>dB</unit>
+                        <nominal>0</nominal>
+                        <scaling>100</scaling>
+                        <kind>77</kind>
+                        <nameformat>EQ\ATT\CH #0</nameformat>
+                    </parameter>
+                </collection>
+                <collection name="Band" datasize="9" arraysize="8">
+                    <parameter name="Bypass" type="bit" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>67</kind>
+                    </parameter>
+                    <parameter name="Frequency" type="uint32_t" arraysize="1">
+                        <minimum>200</minimum>
+                        <maximum>200000</maximum>
+                        <step>1</step>
+                        <unit>Hz</unit>
+                        <scaling>10</scaling>
+                        <kind>69</kind>
+                        <nameformat>EQ\BAND #3 FREQ\MTX #0</nameformat>
+                    </parameter>
+                    <parameter name="Gain" type="int16_t" arraysize="1">
+                        <minimum>-1800</minimum>
+                        <maximum>1800</maximum>
+                        <default>0</default>
+                        <step>10</step>
+                        <unit>dB</unit>
+                        <nominal>0</nominal>
+                        <scaling>100</scaling>
+                        <kind>70</kind>
+                        <nameformat>EQ\BAND #3 GAIN\MTX #0</nameformat>
+                    </parameter>
+                    <parameter name="Q" type="uint16_t" arraysize="1">
+                        <minimum>100</minimum>
+                        <maximum>16000</maximum>
+                        <default>4000</default>
+                        <step>1</step>
+                        <scaling>1000</scaling>
+                        <kind>71</kind>
+                        <nameformat>EQ\BAND #3 Q\MTX #0</nameformat>
+                    </parameter>
+                </collection>
+                <collection name="LowShelving" datasize="3" arraysize="1">
+                    <parameter name="On" type="bit" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>67</kind>
+                    </parameter>
+                    <parameter name="Q" type="uint16_t" arraysize="1">
+                        <minimum>100</minimum>
+                        <maximum>10000</maximum>
+                        <default>4000</default>
+                        <step>1</step>
+                        <scaling>1000</scaling>
+                        <kind>72</kind>
+                        <nameformat>EQ\BAND 1 Q\MTX #0</nameformat>
+                    </parameter>
+                </collection>
+                <collection name="HighShelving" datasize="3" arraysize="1">
+                    <parameter name="On" type="bit" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>67</kind>
+                    </parameter>
+                    <parameter name="Q" type="uint16_t" arraysize="1">
+                        <minimum>100</minimum>
+                        <maximum>10000</maximum>
+                        <default>4000</default>
+                        <step>1</step>
+                        <scaling>1000</scaling>
+                        <kind>72</kind>
+                        <nameformat>EQ\BAND 8 Q\MTX #0</nameformat>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+        <collection name="Proc" datasize="1" arraysize="1">
+            <parameter name="EQDynOrder" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>53</kind>
+            </parameter>
+        </collection>
+        <collection name="Dynamics" datasize="179" arraysize="1">
+            <parameter name="Select" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>1</kind>
+            </parameter>
+            <collection name="Bank" datasize="58" arraysize="2">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>68</kind>
+                </parameter>
+                <parameter name="Type" type="string" arraysize="1">
+                    <maximum>16</maximum>
+                    <default>Classic Comp</default>
+                    <kind>58</kind>
+                </parameter>
+                <parameter name="MixBalance" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>100</maximum>
+                    <default>100</default>
+                    <step>1</step>
+                    <kind>95</kind>
+                </parameter>
+                <collection name="Parameter" datasize="4" arraysize="10">
+                    <parameter name="Value" type="int32_t" arraysize="1">
+                        <minimum>-2147483648</minimum>
+                        <maximum>2147483647</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>96</kind>
+                    </parameter>
+                </collection>
+            </collection>
+            <collection name="KeyIn" datasize="31" arraysize="2">
+                <parameter name="SourceSelect" type="string" arraysize="1">
+                    <maximum>16</maximum>
+                    <default>SELF POST EQ</default>
+                    <kind>45</kind>
+                </parameter>
+                <parameter name="Source" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>35</kind>
+                </parameter>
+                <parameter name="FilterType" type="string" arraysize="1">
+                    <maximum>5</maximum>
+                    <default>NONE</default>
+                    <kind>10</kind>
+                </parameter>
+                <parameter name="FilterQ" type="uint16_t" arraysize="1">
+                    <minimum>100</minimum>
+                    <maximum>10000</maximum>
+                    <default>700</default>
+                    <step>1</step>
+                    <scaling>1000</scaling>
+                    <kind>75</kind>
+                    <nameformat>DYN #1\KEY IN\FILTER Q\MTX #0</nameformat>
+                </parameter>
+                <parameter name="FilterFrequency" type="uint32_t" arraysize="1">
+                    <minimum>200</minimum>
+                    <maximum>200000</maximum>
+                    <default>125000</default>
+                    <step>1</step>
+                    <unit>Hz</unit>
+                    <scaling>10</scaling>
+                    <kind>11</kind>
+                    <nameformat>DYN #1\KEY IN\FILTER FREQ\MTX #0</nameformat>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="Delay" datasize="6" arraysize="1">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="Time" type="uint32_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1000000</maximum>
+                <default>0</default>
+                <step>10</step>
+                <unit>ms</unit>
+                <scaling>1000</scaling>
+                <kind>57</kind>
+                <nameformat>DELAY\TIME\MTX #0</nameformat>
+            </parameter>
+            <collection name="Insert" datasize="1" arraysize="1">
+                <parameter name="Point" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>255</maximum>
+                    <default>100</default>
+                    <step>10</step>
+                    <kind>53</kind>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="DCA" datasize="3" arraysize="1">
+            <parameter name="Assign" type="bit" arraysize="24">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+        </collection>
+        <collection name="MuteGroup" datasize="2" arraysize="1">
+            <parameter name="Assign" type="bit" arraysize="12">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+        </collection>
+        <collection name="Fader" datasize="3" arraysize="1">
+            <parameter name="Level" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>0</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <nominal>0</nominal>
+                <scaling>100</scaling>
+                <kind>60</kind>
+                <nameformat>FADER\MTX #0</nameformat>
+            </parameter>
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+        </collection>
+        <collection name="Out" datasize="1" arraysize="1">
+            <parameter name="Balance" type="int8_t" arraysize="1">
+                <minimum>-63</minimum>
+                <maximum>63</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>32</kind>
+                <nameformat>BALANCE\MTX #0</nameformat>
+            </parameter>
+        </collection>
+        <collection name="ChannelLink" datasize="1" arraysize="1">
+            <parameter name="GroupId" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>52</maximum>
+                <default>0</default>
+                <step>1</step>
+                <nominal>0</nominal>
+            </parameter>
+        </collection>
+        <collection name="SubIn" datasize="6" arraysize="1">
+            <collection name="Patch" datasize="4" arraysize="1">
+                <parameter name="Source" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>35</kind>
+                </parameter>
+            </collection>
+            <collection name="Attenuator" datasize="2" arraysize="1">
+                <parameter name="Gain" type="int16_t" arraysize="1">
+                    <minimum>-9600</minimum>
+                    <maximum>2400</maximum>
+                    <default>0</default>
+                    <step>10</step>
+                    <unit>dB</unit>
+                    <nominal>0</nominal>
+                    <scaling>100</scaling>
+                    <kind>77</kind>
+                    <nameformat>SUB IN/ATT/MTX #0</nameformat>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="Stereo" datasize="743" arraysize="4">
+        <parameter name="Mono" type="bit" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+            <kind>31</kind>
+        </parameter>
+        <parameter name="DelayGang" type="bit" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>1</default>
+            <step>1</step>
+            <kind>31</kind>
+        </parameter>
+        <collection name="Label" datasize="84" arraysize="1">
+            <parameter name="Name" type="string" arraysize="1">
+                <maximum>64</maximum>
+                <default></default>
+            </parameter>
+            <parameter name="Color" type="string" arraysize="1">
+                <maximum>8</maximum>
+                <default>Orange</default>
+                <kind>4</kind>
+            </parameter>
+            <parameter name="Icon" type="string" arraysize="1">
+                <maximum>12</maximum>
+                <default>Blank</default>
+                <kind>26</kind>
+            </parameter>
+        </collection>
+        <collection name="Insert" datasize="18" arraysize="1">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="Point" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>255</maximum>
+                <default>200</default>
+                <step>10</step>
+                <kind>53</kind>
+            </parameter>
+            <collection name="Module" datasize="4" arraysize="4">
+                <collection name="Patch" datasize="4" arraysize="1">
+                    <parameter name="Source" type="uint32_t" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>0xFFFFFFFFUL</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>35</kind>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+        <collection name="HPF" datasize="6" arraysize="2">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>101</kind>
+            </parameter>
+            <parameter name="Frequency" type="uint32_t" arraysize="1">
+                <minimum>200</minimum>
+                <maximum>20000</maximum>
+                <default>800</default>
+                <step>1</step>
+                <unit>Hz</unit>
+                <scaling>10</scaling>
+                <kind>59</kind>
+                <nameformat>HPF\FREQ\ST #0</nameformat>
+            </parameter>
+            <parameter name="Slope" type="uint8_t" arraysize="1">
+                <minimum>6</minimum>
+                <maximum>24</maximum>
+                <default>12</default>
+                <step>6</step>
+                <unit>dB/oct</unit>
+                <kind>25</kind>
+            </parameter>
+        </collection>
+        <collection name="LPF" datasize="6" arraysize="2">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>102</kind>
+            </parameter>
+            <parameter name="Frequency" type="uint32_t" arraysize="1">
+                <minimum>200</minimum>
+                <maximum>200000</maximum>
+                <default>160000</default>
+                <step>1</step>
+                <unit>Hz</unit>
+                <scaling>10</scaling>
+                <kind>64</kind>
+                <nameformat>LPF\FREQ\ST #0</nameformat>
+            </parameter>
+            <parameter name="Slope" type="uint8_t" arraysize="1">
+                <minimum>6</minimum>
+                <maximum>12</maximum>
+                <default>12</default>
+                <step>6</step>
+                <unit>dB/oct</unit>
+                <kind>29</kind>
+            </parameter>
+        </collection>
+        <collection name="PEQ" datasize="187" arraysize="1">
+            <parameter name="Select" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>1</kind>
+            </parameter>
+            <collection name="Bank" datasize="93" arraysize="2">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>67</kind>
+                </parameter>
+                <parameter name="Type" type="string" arraysize="1">
+                    <maximum>12</maximum>
+                    <default>PRECISE</default>
+                    <kind>73</kind>
+                </parameter>
+                <collection name="Attenuator" datasize="2" arraysize="1">
+                    <parameter name="Gain" type="int16_t" arraysize="1">
+                        <minimum>-9600</minimum>
+                        <maximum>2400</maximum>
+                        <default>0</default>
+                        <step>10</step>
+                        <unit>dB</unit>
+                        <nominal>0</nominal>
+                        <scaling>100</scaling>
+                        <kind>77</kind>
+                        <nameformat>EQ\ATT\CH #0</nameformat>
+                    </parameter>
+                </collection>
+                <collection name="Band" datasize="9" arraysize="8">
+                    <parameter name="Bypass" type="bit" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>67</kind>
+                    </parameter>
+                    <parameter name="Frequency" type="uint32_t" arraysize="1">
+                        <minimum>200</minimum>
+                        <maximum>200000</maximum>
+                        <step>1</step>
+                        <unit>Hz</unit>
+                        <scaling>10</scaling>
+                        <kind>69</kind>
+                        <nameformat>EQ\BAND #3 FREQ\ST #0</nameformat>
+                    </parameter>
+                    <parameter name="Gain" type="int16_t" arraysize="1">
+                        <minimum>-1800</minimum>
+                        <maximum>1800</maximum>
+                        <default>0</default>
+                        <step>10</step>
+                        <unit>dB</unit>
+                        <nominal>0</nominal>
+                        <scaling>100</scaling>
+                        <kind>70</kind>
+                        <nameformat>EQ\BAND #3 GAIN\ST #0</nameformat>
+                    </parameter>
+                    <parameter name="Q" type="uint16_t" arraysize="1">
+                        <minimum>100</minimum>
+                        <maximum>16000</maximum>
+                        <default>4000</default>
+                        <step>1</step>
+                        <scaling>1000</scaling>
+                        <kind>71</kind>
+                        <nameformat>EQ\BAND #3 Q\ST #0</nameformat>
+                    </parameter>
+                </collection>
+                <collection name="LowShelving" datasize="3" arraysize="1">
+                    <parameter name="On" type="bit" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>67</kind>
+                    </parameter>
+                    <parameter name="Q" type="uint16_t" arraysize="1">
+                        <minimum>100</minimum>
+                        <maximum>10000</maximum>
+                        <default>4000</default>
+                        <step>1</step>
+                        <scaling>1000</scaling>
+                        <kind>72</kind>
+                        <nameformat>EQ\BAND 1 Q\ST #0</nameformat>
+                    </parameter>
+                </collection>
+                <collection name="HighShelving" datasize="3" arraysize="1">
+                    <parameter name="On" type="bit" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>67</kind>
+                    </parameter>
+                    <parameter name="Q" type="uint16_t" arraysize="1">
+                        <minimum>100</minimum>
+                        <maximum>10000</maximum>
+                        <default>4000</default>
+                        <step>1</step>
+                        <scaling>1000</scaling>
+                        <kind>72</kind>
+                        <nameformat>EQ\BAND 8 Q\ST #0</nameformat>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+        <collection name="Proc" datasize="1" arraysize="1">
+            <parameter name="EQDynOrder" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>53</kind>
+            </parameter>
+        </collection>
+        <collection name="Dynamics" datasize="179" arraysize="1">
+            <parameter name="Select" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>1</kind>
+            </parameter>
+            <collection name="Bank" datasize="58" arraysize="2">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>68</kind>
+                </parameter>
+                <parameter name="Type" type="string" arraysize="1">
+                    <maximum>16</maximum>
+                    <default>Classic Comp</default>
+                    <kind>58</kind>
+                </parameter>
+                <parameter name="MixBalance" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>100</maximum>
+                    <default>100</default>
+                    <step>1</step>
+                    <kind>95</kind>
+                </parameter>
+                <collection name="Parameter" datasize="4" arraysize="10">
+                    <parameter name="Value" type="int32_t" arraysize="1">
+                        <minimum>-2147483648</minimum>
+                        <maximum>2147483647</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>96</kind>
+                    </parameter>
+                </collection>
+            </collection>
+            <collection name="KeyIn" datasize="31" arraysize="2">
+                <parameter name="SourceSelect" type="string" arraysize="1">
+                    <maximum>16</maximum>
+                    <default>SELF POST EQ</default>
+                    <kind>45</kind>
+                </parameter>
+                <parameter name="Source" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>35</kind>
+                </parameter>
+                <parameter name="FilterType" type="string" arraysize="1">
+                    <maximum>5</maximum>
+                    <default>NONE</default>
+                    <kind>10</kind>
+                </parameter>
+                <parameter name="FilterQ" type="uint16_t" arraysize="1">
+                    <minimum>100</minimum>
+                    <maximum>10000</maximum>
+                    <default>700</default>
+                    <step>1</step>
+                    <scaling>1000</scaling>
+                    <kind>75</kind>
+                    <nameformat>DYN #1\KEY IN\FILTER Q\ST #0</nameformat>
+                </parameter>
+                <parameter name="FilterFrequency" type="uint32_t" arraysize="1">
+                    <minimum>200</minimum>
+                    <maximum>200000</maximum>
+                    <default>125000</default>
+                    <step>1</step>
+                    <unit>Hz</unit>
+                    <scaling>10</scaling>
+                    <kind>11</kind>
+                    <nameformat>DYN #1\KEY IN\FILTER FREQ\ST #0</nameformat>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="Delay" datasize="6" arraysize="1">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="Time" type="uint32_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1000000</maximum>
+                <default>0</default>
+                <step>10</step>
+                <unit>ms</unit>
+                <scaling>1000</scaling>
+                <kind>57</kind>
+                <nameformat>DELAY\TIME\ST #0</nameformat>
+            </parameter>
+            <collection name="Insert" datasize="1" arraysize="1">
+                <parameter name="Point" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>255</maximum>
+                    <default>100</default>
+                    <step>10</step>
+                    <kind>53</kind>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="ToMatrix" datasize="19" arraysize="12">
+            <parameter name="Pre" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="PrePoint" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>255</maximum>
+                <default>100</default>
+                <step>10</step>
+                <kind>53</kind>
+            </parameter>
+            <parameter name="PostPoint" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>255</maximum>
+                <default>120</default>
+                <step>10</step>
+                <kind>53</kind>
+            </parameter>
+            <parameter name="Level" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>-32768</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <nominal>0</nominal>
+                <scaling>100</scaling>
+                <kind>62</kind>
+                <nameformat>TO MTX #1\SEND LEVEL\ST #0</nameformat>
+            </parameter>
+            <parameter name="Pan" type="int8_t" arraysize="1">
+                <minimum>-63</minimum>
+                <maximum>63</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>32</kind>
+                <nameformat>TO MTX #1\PAN/BAL\ST #0</nameformat>
+            </parameter>
+            <parameter name="PanType" type="string" arraysize="1">
+                <maximum>12</maximum>
+                <default>BALANCE</default>
+                <kind>45</kind>
+            </parameter>
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="FollowOn" type="bit" arraysize="1">
+                <minimum>1</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="FollowFader" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="FollowDCA" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="FollowBalance" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+            <parameter name="FollowBalanceMode" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>0</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+        </collection>
+        <collection name="DCA" datasize="3" arraysize="1">
+            <parameter name="Assign" type="bit" arraysize="24">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+        </collection>
+        <collection name="MuteGroup" datasize="2" arraysize="1">
+            <parameter name="Assign" type="bit" arraysize="12">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+        </collection>
+        <collection name="Fader" datasize="3" arraysize="1">
+            <parameter name="Level" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>-32768</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <nominal>0</nominal>
+                <scaling>100</scaling>
+                <kind>60</kind>
+                <nameformat>FADER\ST #0</nameformat>
+            </parameter>
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>65</kind>
+            </parameter>
+        </collection>
+        <collection name="Out" datasize="1" arraysize="1">
+            <parameter name="Balance" type="int8_t" arraysize="1">
+                <minimum>-63</minimum>
+                <maximum>63</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>32</kind>
+                <nameformat>BALANCE\ST #0</nameformat>
+            </parameter>
+        </collection>
+        <collection name="SubIn" datasize="6" arraysize="1">
+            <collection name="Patch" datasize="4" arraysize="1">
+                <parameter name="Source" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>35</kind>
+                </parameter>
+            </collection>
+            <collection name="Attenuator" datasize="2" arraysize="1">
+                <parameter name="Gain" type="int16_t" arraysize="1">
+                    <minimum>-9600</minimum>
+                    <maximum>2400</maximum>
+                    <default>0</default>
+                    <step>10</step>
+                    <unit>dB</unit>
+                    <nominal>0</nominal>
+                    <scaling>100</scaling>
+                    <kind>77</kind>
+                    <nameformat>SUB IN/ATT/ST #0</nameformat>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="DCA" datasize="88" arraysize="24">
+        <parameter name="DCAMuteTarget" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>1</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <collection name="Label" datasize="84" arraysize="1">
+            <parameter name="Name" type="string" arraysize="1">
+                <maximum>64</maximum>
+                <default></default>
+            </parameter>
+            <parameter name="Color" type="string" arraysize="1">
+                <maximum>8</maximum>
+                <default>Yellow</default>
+                <kind>4</kind>
+            </parameter>
+            <parameter name="Icon" type="string" arraysize="1">
+                <maximum>12</maximum>
+                <default>Blank</default>
+                <kind>26</kind>
+            </parameter>
+        </collection>
+        <collection name="Fader" datasize="3" arraysize="1">
+            <parameter name="Level" type="int16_t" arraysize="1">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>0</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <nominal>0</nominal>
+                <scaling>100</scaling>
+                <kind>27</kind>
+                <nameformat>FADER\DCA #0</nameformat>
+            </parameter>
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="Mute" datasize="64" arraysize="12">
+        <collection name="Label" datasize="64" arraysize="1">
+            <parameter name="Name" type="string" arraysize="1">
+                <maximum>64</maximum>
+                <default></default>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="GEQRack2" datasize="439" arraysize="32">
+        <parameter name="Type" type="string" arraysize="1">
+            <maximum>12</maximum>
+            <default></default>
+        </parameter>
+        <parameter name="SlotSize" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>32</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <parameter name="ItemNum" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>2</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <parameter name="GEQLink" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>3</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <parameter name="GEQLRLink" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>3</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <parameter name="PEQLRLink" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>3</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+        <collection name="AB" datasize="211" arraysize="2">
+            <parameter name="On" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <collection name="Patch" datasize="4" arraysize="1">
+                <parameter name="Source" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>35</kind>
+                </parameter>
+            </collection>
+            <collection name="NotchFilter" datasize="7" arraysize="4">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="Frequency" type="uint32_t" arraysize="1">
+                    <minimum>200</minimum>
+                    <maximum>200000</maximum>
+                    <default>200</default>
+                    <step>1</step>
+                    <unit>Hz</unit>
+                    <scaling>10</scaling>
+                    <kind>36</kind>
+                    <nameformat>NOTCH\FREQ</nameformat>
+                </parameter>
+                <parameter name="Q" type="uint16_t" arraysize="1">
+                    <minimum>100</minimum>
+                    <maximum>63000</maximum>
+                    <default>10000</default>
+                    <step>1</step>
+                    <scaling>1000</scaling>
+                    <kind>49</kind>
+                    <nameformat>NOTCH\Q</nameformat>
+                </parameter>
+            </collection>
+            <collection name="GEQ" datasize="74" arraysize="1">
+                <parameter name="Limit" type="string" arraysize="1">
+                    <maximum>12</maximum>
+                    <default>+15dB_-15dB</default>
+                </parameter>
+                <collection name="Band" datasize="2" arraysize="31">
+                    <parameter name="Gain" type="int16_t" arraysize="1">
+                        <minimum>-2400</minimum>
+                        <maximum>1500</maximum>
+                        <default>0</default>
+                        <step>50</step>
+                        <scaling>100</scaling>
+                        <nameformat>GAIN</nameformat>
+                    </parameter>
+                </collection>
+            </collection>
+            <collection name="PEQ" datasize="92" arraysize="1">
+                <parameter name="Type" type="string" arraysize="1">
+                    <maximum>12</maximum>
+                    <default>PRECISE</default>
+                    <kind>41</kind>
+                </parameter>
+                <collection name="Band" datasize="9" arraysize="8">
+                    <parameter name="Bypass" type="bit" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>31</kind>
+                    </parameter>
+                    <parameter name="Frequency" type="uint32_t" arraysize="1">
+                        <minimum>200</minimum>
+                        <maximum>200000</maximum>
+                        <default>200</default>
+                        <step>1</step>
+                        <unit>Hz</unit>
+                        <scaling>10</scaling>
+                        <kind>36</kind>
+                        <nameformat>BAND #3\FREQ</nameformat>
+                    </parameter>
+                    <parameter name="Gain" type="int16_t" arraysize="1">
+                        <minimum>-1800</minimum>
+                        <maximum>1800</maximum>
+                        <default>0</default>
+                        <step>10</step>
+                        <unit>dB</unit>
+                        <nominal>0</nominal>
+                        <scaling>100</scaling>
+                        <kind>37</kind>
+                        <nameformat>BAND #3\GAIN</nameformat>
+                    </parameter>
+                    <parameter name="Q" type="uint16_t" arraysize="1">
+                        <minimum>100</minimum>
+                        <maximum>16000</maximum>
+                        <default>4000</default>
+                        <step>1</step>
+                        <scaling>1000</scaling>
+                        <kind>39</kind>
+                        <nameformat>BAND #3\Q</nameformat>
+                    </parameter>
+                </collection>
+                <collection name="LowShelving" datasize="3" arraysize="1">
+                    <parameter name="On" type="bit" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>31</kind>
+                    </parameter>
+                    <parameter name="Q" type="uint16_t" arraysize="1">
+                        <minimum>100</minimum>
+                        <maximum>10000</maximum>
+                        <default>4000</default>
+                        <step>1</step>
+                        <scaling>1000</scaling>
+                        <kind>40</kind>
+                        <nameformat>BAND 1\Q</nameformat>
+                    </parameter>
+                </collection>
+                <collection name="HighShelving" datasize="3" arraysize="1">
+                    <parameter name="On" type="bit" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>31</kind>
+                    </parameter>
+                    <parameter name="Q" type="uint16_t" arraysize="1">
+                        <minimum>100</minimum>
+                        <maximum>10000</maximum>
+                        <default>4000</default>
+                        <step>1</step>
+                        <scaling>1000</scaling>
+                        <kind>40</kind>
+                        <nameformat>BAND 8\Q</nameformat>
+                    </parameter>
+                </collection>
+                <collection name="Attenuator" datasize="2" arraysize="1">
+                    <parameter name="Gain" type="int16_t" arraysize="1">
+                        <minimum>-9600</minimum>
+                        <maximum>2400</maximum>
+                        <default>0</default>
+                        <step>10</step>
+                        <unit>dB</unit>
+                        <nominal>0</nominal>
+                        <scaling>100</scaling>
+                        <kind>91</kind>
+                    </parameter>
+                </collection>
+            </collection>
+            <collection name="HPF" datasize="6" arraysize="1">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="Frequency" type="uint32_t" arraysize="1">
+                    <minimum>200</minimum>
+                    <maximum>20000</maximum>
+                    <default>800</default>
+                    <step>1</step>
+                    <unit>Hz</unit>
+                    <scaling>10</scaling>
+                    <kind>24</kind>
+                    <nameformat>HPF\FREQ\CH #0</nameformat>
+                </parameter>
+                <parameter name="Slope" type="uint8_t" arraysize="1">
+                    <minimum>6</minimum>
+                    <maximum>24</maximum>
+                    <default>12</default>
+                    <step>6</step>
+                    <unit>dB/oct</unit>
+                    <kind>89</kind>
+                </parameter>
+            </collection>
+            <collection name="LPF" datasize="6" arraysize="1">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+                <parameter name="Frequency" type="uint32_t" arraysize="1">
+                    <minimum>200</minimum>
+                    <maximum>200000</maximum>
+                    <default>160000</default>
+                    <step>1</step>
+                    <unit>Hz</unit>
+                    <scaling>10</scaling>
+                    <kind>28</kind>
+                    <nameformat>LPF\FREQ\CH #0</nameformat>
+                </parameter>
+                <parameter name="Slope" type="uint8_t" arraysize="1">
+                    <minimum>6</minimum>
+                    <maximum>12</maximum>
+                    <default>12</default>
+                    <step>6</step>
+                    <unit>dB/oct</unit>
+                    <kind>90</kind>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="Tempo" datasize="2" arraysize="5">
+        <parameter name="Bpm" type="uint16_t" arraysize="1">
+            <minimum>25</minimum>
+            <maximum>300</maximum>
+            <default>120</default>
+            <step>1</step>
+            <nameformat>TEMPO#0\BPM</nameformat>
+        </parameter>
+    </collection>
+    <collection name="Dynamics" datasize="16" arraysize="1">
+        <collection name="KeyIn" datasize="16" arraysize="1">
+            <collection name="ExternalIn" datasize="4" arraysize="4">
+                <parameter name="Source" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>35</kind>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="EffectRack" datasize="128" arraysize="1">
+        <collection name="Slot" datasize="8" arraysize="16">
+            <collection name="InputPort" datasize="4" arraysize="2">
+                <collection name="Patch" datasize="4" arraysize="1">
+                    <parameter name="Source" type="uint32_t" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>0xFFFFFFFFUL</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>35</kind>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="PremiumRack" datasize="256" arraysize="4">
+        <collection name="Slot" datasize="16" arraysize="16">
+            <collection name="InputPort" datasize="4" arraysize="2">
+                <collection name="Patch" datasize="4" arraysize="1">
+                    <parameter name="Source" type="uint32_t" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>0xFFFFFFFFUL</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>35</kind>
+                    </parameter>
+                </collection>
+            </collection>
+            <collection name="KeyInInput" datasize="4" arraysize="2">
+                <collection name="Patch" datasize="4" arraysize="1">
+                    <parameter name="Source" type="uint32_t" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>0xFFFFFFFFUL</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>35</kind>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="Console" datasize="16" arraysize="1">
+        <collection name="Course" datasize="8" arraysize="2">
+            <collection name="FaderBank" datasize="4" arraysize="2">
+                <parameter name="SelectedBank" type="uint32_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="DuganAutomixer" datasize="384" arraysize="1">
+        <collection name="Channel" datasize="6" arraysize="64">
+            <parameter name="Group" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>4</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="Bypass" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Override" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ChMode" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>2</maximum>
+                <default>1</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="ChModePreset" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>2</maximum>
+                <default>1</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="Weight" type="int16_t" arraysize="1">
+                <minimum>-200</minimum>
+                <maximum>30</maximum>
+                <default>0</default>
+                <step>1</step>
+                <nominal>0</nominal>
+                <scaling>2</scaling>
+                <kind>74</kind>
+                <nameformat>Automixer\ch #1\weight</nameformat>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="ChannelLink" datasize="4134" arraysize="1">
+        <collection name="Input" datasize="64" arraysize="53">
+            <parameter name="ChannelPatch" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ChannelGain" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Filters" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="EQ" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Proc" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Dynamics" type="bit" arraysize="2">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Delay" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="DirectOutPatch" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Insert" type="bit" arraysize="2">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="DCAAssignment" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="MuteAssignment" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ChannelOn" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Fader" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="PanRouting" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="MixSend" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="MixOn" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="MatrixSend" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="MatrixOn" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <collection name="HeadAmp" datasize="1" arraysize="1">
+                <parameter name="Gain" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="ToMix" datasize="1" arraysize="48">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+            <collection name="ToMatrix" datasize="1" arraysize="12">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="Output" datasize="14" arraysize="53">
+            <parameter name="Filters" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="EQ" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Proc" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Dynamics" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Delay" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Insert" type="bit" arraysize="2">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="DCAAssignment" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="MuteAssignment" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="ChannelOn" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="Fader" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="PanRouting" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="MatrixSend" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <parameter name="MatrixOn" type="bit" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>1</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+            <collection name="ToMatrix" datasize="1" arraysize="12">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>1</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="DanteRemoteControl" datasize="27648" arraysize="1">
+        <collection name="IOUnit" datasize="1152" arraysize="24">
+            <collection name="InputPort" datasize="9" arraysize="128">
+                <collection name="HeadAmp" datasize="6" arraysize="1">
+                    <parameter name="48V" type="bit" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>31</kind>
+                    </parameter>
+                    <parameter name="Gain" type="int16_t" arraysize="1">
+                        <minimum>-600</minimum>
+                        <maximum>6600</maximum>
+                        <default>-600</default>
+                        <step>100</step>
+                        <unit>dB</unit>
+                        <scaling>100</scaling>
+                        <kind>2</kind>
+                        <nameformat>DANTE HA\GAIN\UNIT#1\PORT#2</nameformat>
+                    </parameter>
+                    <parameter name="CompensationOn" type="bit" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>66</kind>
+                    </parameter>
+                    <parameter name="CompensationGain" type="int16_t" arraysize="1">
+                        <minimum>-600</minimum>
+                        <maximum>6600</maximum>
+                        <default>-600</default>
+                        <step>100</step>
+                        <unit>dB</unit>
+                        <scaling>100</scaling>
+                        <nameformat>DANTE HA\COMP GAIN\UNIT#1\PORT#2</nameformat>
+                    </parameter>
+                </collection>
+                <collection name="HPF" datasize="3" arraysize="1">
+                    <parameter name="On" type="bit" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>31</kind>
+                    </parameter>
+                    <parameter name="Frequency" type="int16_t" arraysize="1">
+                        <minimum>200</minimum>
+                        <maximum>20000</maximum>
+                        <default>800</default>
+                        <step>1</step>
+                        <unit>Hz</unit>
+                        <scaling>10</scaling>
+                        <kind>76</kind>
+                        <nameformat>DANTE HPF\FREQ\UNIT#1\PORT#2</nameformat>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="PremiumRackDisplay" datasize="1" arraysize="2">
+        <parameter name="StartDspNo" type="uint8_t" arraysize="1">
+            <minimum>0</minimum>
+            <maximum>23</maximum>
+            <default>0</default>
+            <step>1</step>
+        </parameter>
+    </collection>
+    <collection name="Cue" datasize="20" arraysize="2">
+        <collection name="Insert" datasize="8" arraysize="1">
+            <collection name="Line" datasize="4" arraysize="2">
+                <collection name="Patch" datasize="4" arraysize="1">
+                    <parameter name="Source" type="uint32_t" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>0xFFFFFFFFUL</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>35</kind>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+        <collection name="SubIn" datasize="12" arraysize="1">
+            <collection name="Line" datasize="6" arraysize="2">
+                <collection name="Patch" datasize="4" arraysize="1">
+                    <parameter name="Source" type="uint32_t" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>0xFFFFFFFFUL</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>35</kind>
+                    </parameter>
+                </collection>
+                <collection name="Attenuator" datasize="2" arraysize="1">
+                    <parameter name="Gain" type="int16_t" arraysize="1">
+                        <minimum>-9600</minimum>
+                        <maximum>2400</maximum>
+                        <default>0</default>
+                        <step>10</step>
+                        <unit>dB</unit>
+                        <nominal>0</nominal>
+                        <scaling>100</scaling>
+                        <kind>77</kind>
+                        <nameformat>SUB IN/ATT/CUE #0</nameformat>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="Monitor" datasize="12" arraysize="2">
+        <collection name="Insert" datasize="12" arraysize="1">
+            <collection name="Line" datasize="4" arraysize="3">
+                <collection name="Patch" datasize="4" arraysize="1">
+                    <parameter name="Source" type="uint32_t" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>0xFFFFFFFFUL</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>35</kind>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="ToPhones" datasize="8" arraysize="2">
+        <collection name="Insert" datasize="8" arraysize="1">
+            <collection name="Line" datasize="4" arraysize="2">
+                <collection name="Patch" datasize="4" arraysize="1">
+                    <parameter name="Source" type="uint32_t" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>0xFFFFFFFFUL</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>35</kind>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="SurroundCue" datasize="36" arraysize="1">
+        <collection name="SubIn" datasize="36" arraysize="1">
+            <collection name="Line" datasize="6" arraysize="6">
+                <collection name="Patch" datasize="4" arraysize="1">
+                    <parameter name="Source" type="uint32_t" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>0xFFFFFFFFUL</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                        <kind>35</kind>
+                    </parameter>
+                </collection>
+                <collection name="Attenuator" datasize="2" arraysize="1">
+                    <parameter name="Gain" type="int16_t" arraysize="1">
+                        <minimum>-9600</minimum>
+                        <maximum>2400</maximum>
+                        <default>0</default>
+                        <step>10</step>
+                        <unit>dB</unit>
+                        <nominal>0</nominal>
+                        <scaling>100</scaling>
+                        <kind>77</kind>
+                        <nameformat>SUB IN/ATT/S.CUE #0</nameformat>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="CustomFaderBank" datasize="4496" arraysize="1">
+        <collection name="Course" datasize="2240" arraysize="2">
+            <collection name="CustomFader" datasize="560" arraysize="4">
+                <collection name="Bank" datasize="112" arraysize="5">
+                    <parameter name="ChID" type="uint32_t" arraysize="12">
+                        <minimum>0</minimum>
+                        <maximum>0xFFFFFFFFUL</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                    </parameter>
+                    <parameter name="LabelName" type="string" arraysize="1">
+                        <maximum>64</maximum>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+        <collection name="Master" datasize="16" arraysize="1">
+            <collection name="MasterFader" datasize="16" arraysize="1">
+                <parameter name="ChID" type="uint32_t" arraysize="4">
+                    <minimum>0</minimum>
+                    <maximum>0xFFFFFFFFUL</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="DM7ControlCustomFader" datasize="8" arraysize="1">
+        <collection name="MasterFader" datasize="8" arraysize="1">
+            <parameter name="ChID" type="uint32_t" arraysize="2">
+                <minimum>0</minimum>
+                <maximum>0xFFFFFFFFUL</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="AIMixing" datasize="264" arraysize="1">
+        <collection name="AutoFader" datasize="140" arraysize="1">
+            <parameter name="MaxLevel" type="int16_t" arraysize="4">
+                <minimum>-32768</minimum>
+                <maximum>1000</maximum>
+                <default>0</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <nominal>0</nominal>
+                <scaling>100</scaling>
+                <kind>60</kind>
+            </parameter>
+            <parameter name="Mode" type="string" arraysize="1">
+                <maximum>12</maximum>
+                <default>Manual</default>
+            </parameter>
+            <collection name="Channel" datasize="1" arraysize="120">
+                <parameter name="Group" type="uint8_t" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>4</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="AutoHA" datasize="124" arraysize="1">
+            <parameter name="TargetLevel" type="int16_t" arraysize="1">
+                <minimum>-6000</minimum>
+                <maximum>0</maximum>
+                <default>-1800</default>
+                <step>100</step>
+                <unit>dBFS</unit>
+                <scaling>100</scaling>
+            </parameter>
+            <parameter name="MaxGain" type="int16_t" arraysize="1">
+                <minimum>2000</minimum>
+                <maximum>6600</maximum>
+                <default>4000</default>
+                <step>100</step>
+                <unit>dB</unit>
+                <scaling>100</scaling>
+            </parameter>
+            <collection name="Channel" datasize="1" arraysize="120">
+                <parameter name="On" type="bit" arraysize="1">
+                    <minimum>0</minimum>
+                    <maximum>1</maximum>
+                    <default>0</default>
+                    <step>1</step>
+                    <kind>31</kind>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+</collections>
+</function>

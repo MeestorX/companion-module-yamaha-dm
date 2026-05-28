@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<function name="Security" collections="6" parameters="8" datasize="186" stringsize="34">
+<collections>
+    <collection name="UserAccount" datasize="186" arraysize="1">
+        <parameter name="DataFormat" type="string" arraysize="1">
+            <maximum>4</maximum>
+            <default>DM3</default>
+        </parameter>
+        <collection name="DM3" datasize="182" arraysize="1">
+            <collection name="Account" datasize="88" arraysize="2">
+                <parameter name="UserName" type="string" arraysize="1">
+                    <maximum>16</maximum>
+                    <default>Administrator</default>
+                </parameter>
+                <parameter name="UserType" type="string" arraysize="1">
+                    <maximum>16</maximum>
+                    <default>Administrator</default>
+                </parameter>
+                <parameter name="Comment" type="string" arraysize="1">
+                    <maximum>32</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="Password" type="string" arraysize="1">
+                    <maximum>24</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+            <collection name="UserLevel" datasize="3" arraysize="2">
+                <collection name="PanelAccess" datasize="3" arraysize="1">
+                    <parameter name="FaderBank" type="uint8_t" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>3</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                    </parameter>
+                    <parameter name="UserDefinedKeys" type="uint8_t" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>1</default>
+                        <step>1</step>
+                        <kind>31</kind>
+                    </parameter>
+                    <parameter name="ONKeys" type="uint8_t" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>1</maximum>
+                        <default>1</default>
+                        <step>1</step>
+                        <kind>31</kind>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+    </collection>
+</collections>
+</function>

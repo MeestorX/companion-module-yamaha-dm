@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<function name="Calibration" collections="8" parameters="14" datasize="183" stringsize="6">
+<collections>
+    <collection name="PortTrim" datasize="56" arraysize="1">
+        <collection name="InputPort" datasize="2" arraysize="16">
+            <parameter name="Trim" type="int16_t" arraysize="1">
+                <minimum>-100</minimum>
+                <maximum>100</maximum>
+                <default>0</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <nominal>0</nominal>
+                <scaling>100</scaling>
+            </parameter>
+        </collection>
+        <collection name="OmniOut" datasize="3" arraysize="8">
+            <parameter name="Trim" type="int16_t" arraysize="1">
+                <minimum>-100</minimum>
+                <maximum>100</maximum>
+                <default>0</default>
+                <step>1</step>
+                <unit>dB</unit>
+                <nominal>0</nominal>
+                <scaling>100</scaling>
+            </parameter>
+            <parameter name="Phase" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+                <kind>31</kind>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="FaderCalib" datasize="126" arraysize="1">
+        <collection name="Fader" datasize="14" arraysize="9">
+            <parameter name="FactoryCalib" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="Selected" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="UpDuty" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>255</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="DownDuty" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>255</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="UpMaxDuty" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>255</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="DownMaxDuty" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>255</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="Position1" type="uint16_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1023</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="Position2" type="uint16_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1023</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="Position3" type="uint16_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1023</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+            <parameter name="Position4" type="uint16_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>1023</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+    </collection>
+    <collection name="ScreenCalib" datasize="1" arraysize="1">
+        <collection name="ColorTone" datasize="1" arraysize="1">
+            <parameter name="Select" type="uint8_t" arraysize="1">
+                <minimum>0</minimum>
+                <maximum>9</maximum>
+                <default>0</default>
+                <step>1</step>
+            </parameter>
+        </collection>
+    </collection>
+</collections>
+</function>

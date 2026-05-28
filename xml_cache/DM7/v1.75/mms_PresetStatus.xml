@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<function name="PresetStatus" collections="79" parameters="62" datasize="363200" stringsize="58">
+<collections>
+    <collection name="Factory" datasize="114400" arraysize="1">
+        <collection name="CHInput" datasize="24800" arraysize="1">
+            <collection name="Info" datasize="248" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="Category1" type="string" arraysize="1">
+                    <maximum>12</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="Category2" type="string" arraysize="1">
+                    <maximum>128</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="PresetType" type="string" arraysize="1">
+                    <maximum>32</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="PresetOption" type="string" arraysize="1">
+                    <maximum>8</maximum>
+                    <default></default>
+                </parameter>
+                <collection name="Focus" datasize="4" arraysize="1">
+                    <parameter name="Target" type="uint32_t" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>0xFFFFFFFFUL</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+        <collection name="CHOutput" datasize="24800" arraysize="1">
+            <collection name="Info" datasize="248" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="Category1" type="string" arraysize="1">
+                    <maximum>12</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="Category2" type="string" arraysize="1">
+                    <maximum>128</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="PresetType" type="string" arraysize="1">
+                    <maximum>32</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="PresetOption" type="string" arraysize="1">
+                    <maximum>8</maximum>
+                    <default></default>
+                </parameter>
+                <collection name="Focus" datasize="4" arraysize="1">
+                    <parameter name="Target" type="uint32_t" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>0xFFFFFFFFUL</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+        <collection name="DanteInputPatch" datasize="6400" arraysize="1">
+            <collection name="Info" datasize="64" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="PEQ" datasize="6400" arraysize="1">
+            <collection name="Info" datasize="64" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="GEQ" datasize="10400" arraysize="1">
+            <collection name="Info" datasize="104" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="PresetType" type="string" arraysize="1">
+                    <maximum>32</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="PresetOption" type="string" arraysize="1">
+                    <maximum>8</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="FX" datasize="28800" arraysize="1">
+            <collection name="Info" datasize="96" arraysize="300">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="PresetType" type="string" arraysize="1">
+                    <maximum>32</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="REVX" datasize="6400" arraysize="1">
+            <collection name="Info" datasize="64" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="HQ_PITCH" datasize="6400" arraysize="1">
+            <collection name="Info" datasize="64" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+    <collection name="User" datasize="248800" arraysize="1">
+        <collection name="CHInput" datasize="24800" arraysize="1">
+            <collection name="Info" datasize="248" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="Category1" type="string" arraysize="1">
+                    <maximum>12</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="Category2" type="string" arraysize="1">
+                    <maximum>128</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="PresetType" type="string" arraysize="1">
+                    <maximum>32</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="PresetOption" type="string" arraysize="1">
+                    <maximum>8</maximum>
+                    <default></default>
+                </parameter>
+                <collection name="Focus" datasize="4" arraysize="1">
+                    <parameter name="Target" type="uint32_t" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>0xFFFFFFFFUL</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+        <collection name="CHOutput" datasize="24800" arraysize="1">
+            <collection name="Info" datasize="248" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="Category1" type="string" arraysize="1">
+                    <maximum>12</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="Category2" type="string" arraysize="1">
+                    <maximum>128</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="PresetType" type="string" arraysize="1">
+                    <maximum>32</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="PresetOption" type="string" arraysize="1">
+                    <maximum>8</maximum>
+                    <default></default>
+                </parameter>
+                <collection name="Focus" datasize="4" arraysize="1">
+                    <parameter name="Target" type="uint32_t" arraysize="1">
+                        <minimum>0</minimum>
+                        <maximum>0xFFFFFFFFUL</maximum>
+                        <default>0</default>
+                        <step>1</step>
+                    </parameter>
+                </collection>
+            </collection>
+        </collection>
+        <collection name="Actor" datasize="12800" arraysize="1">
+            <collection name="Info" datasize="64" arraysize="200">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="DanteInputPatch" datasize="6400" arraysize="1">
+            <collection name="Info" datasize="64" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="Focus" datasize="6400" arraysize="1">
+            <collection name="Info" datasize="64" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="PEQ" datasize="6400" arraysize="1">
+            <collection name="Info" datasize="64" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="GEQ" datasize="10400" arraysize="1">
+            <collection name="Info" datasize="104" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="PresetType" type="string" arraysize="1">
+                    <maximum>32</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="PresetOption" type="string" arraysize="1">
+                    <maximum>8</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="FX" datasize="28800" arraysize="1">
+            <collection name="Info" datasize="96" arraysize="300">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+                <parameter name="PresetType" type="string" arraysize="1">
+                    <maximum>32</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="REVX" datasize="6400" arraysize="1">
+            <collection name="Info" datasize="64" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="HQ_PITCH" datasize="6400" arraysize="1">
+            <collection name="Info" datasize="64" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="COMP276" datasize="6400" arraysize="1">
+            <collection name="Info" datasize="64" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="EQUALIZER601" datasize="6400" arraysize="1">
+            <collection name="Info" datasize="64" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="OPENDECK" datasize="6400" arraysize="1">
+            <collection name="Info" datasize="64" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="PORTICO5033" datasize="6400" arraysize="1">
+            <collection name="Info" datasize="64" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="PORTICO5043" datasize="6400" arraysize="1">
+            <collection name="Info" datasize="64" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="U76" datasize="6400" arraysize="1">
+            <collection name="Info" datasize="64" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="OPT2A" datasize="6400" arraysize="1">
+            <collection name="Info" datasize="64" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="EQ1A" datasize="6400" arraysize="1">
+            <collection name="Info" datasize="64" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="DYNAMICEQ" datasize="6400" arraysize="1">
+            <collection name="Info" datasize="64" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="MAX100" datasize="6400" arraysize="1">
+            <collection name="Info" datasize="64" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="DUAL_PHASER" datasize="6400" arraysize="1">
+            <collection name="Info" datasize="64" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="VINTAGE_PHASER" datasize="6400" arraysize="1">
+            <collection name="Info" datasize="64" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="BUSSCOMP369" datasize="6400" arraysize="1">
+            <collection name="Info" datasize="64" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="MBC4" datasize="6400" arraysize="1">
+            <collection name="Info" datasize="64" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="DYNAMICEQ4" datasize="6400" arraysize="1">
+            <collection name="Info" datasize="64" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="ANALOG_DELAY" datasize="6400" arraysize="1">
+            <collection name="Info" datasize="64" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="PORTICO5045" datasize="6400" arraysize="1">
+            <collection name="Info" datasize="64" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+        <collection name="DANSE" datasize="6400" arraysize="1">
+            <collection name="Info" datasize="64" arraysize="100">
+                <parameter name="Title" type="string" arraysize="1">
+                    <maximum>64</maximum>
+                    <default></default>
+                </parameter>
+            </collection>
+        </collection>
+    </collection>
+</collections>
+</function>
