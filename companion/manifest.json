@@ -1,18 +1,18 @@
 {
 	"$schema": "../node_modules/@companion-module/base/assets/manifest.schema.json",
 	"type": "connection",
-	"id": "your-module-name",
-	"name": "your-module-name",
-	"shortname": "module-shortname",
-	"description": "A short one line description of your module",
+	"id": "yamaha-dm",
+	"name": "yamaha-dm",
+	"shortname": "yamaha-dm",
+	"description": "A companion module for the Yamaha DM series Mixers",
 	"version": "0.0.0",
 	"license": "MIT",
-	"repository": "git+https://github.com/bitfocus/companion-module-your-module-name.git",
-	"bugs": "https://github.com/bitfocus/companion-module-your-module-name/issues",
+	"repository": "git+https://github.com/MeestorX/companion-module-yamaha-dm.git",
+	"bugs": "https://github.com/MeestorX/companion-module-yamaha-dm/issues",
 	"maintainers": [
 		{
-			"name": "Your name",
-			"email": "Your email"
+			"name": "Andrew Broughton",
+			"email": "andy@checkcheckonetwo.com"
 		}
 	],
 	"runtime": {
@@ -22,7 +22,7 @@
 		"entrypoint": "../dist/main.js"
 	},
 	"legacyIds": [],
-	"manufacturer": "Your company",
-	"products": ["Your product"],
-	"keywords": []
+	"manufacturer": "Yamaha",
+	"products": ["DM3", "DM7"],
+	"keywords": ["Mixer"]
 }
